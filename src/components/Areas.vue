@@ -10,10 +10,10 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <div class="md:col-span-2">
-          <div id="map" style="height: 450px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+          <div id="map" style="height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-4" ref="cardsContainer">
           <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
             <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Cape Coral</h3>
             <p class="text-sm" style="color: #2B2B2B;">Serving Cape Coral's growing residential market with expert installations.</p>
