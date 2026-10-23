@@ -1,20 +1,21 @@
 <template>
-  <section class="bg-navy text-white relative min-h-screen flex items-center">
-    <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><rect fill=%22%230A2540%22 width=%221200%22 height=%22600%22/><path fill=%22%23FFFFFF%22 opacity=%220.05%22 d=%22M0 0h100v100H0zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100zM0 150h100v100H0zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100zM0 300h100v100H0zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100zm300 0h100v100h-100zm150 0h100v100h-100z%22/></svg>')"></div>
+  <section class="relative min-h-screen flex items-center" style="background: linear-gradient(135deg, #405A7A 0%, #405A7A 100%);">
+    <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><defs><pattern id=%22p%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><rect fill=%22none%22 stroke=%22rgba(255,255,255,0.1)%22 stroke-width=%221%22 width=%22100%22 height=%22100%22/></pattern></defs><rect width=%221200%22 height=%22600%22 fill=%22url(%23p)%22/></svg>')"></div>
     <div class="max-w-6xl mx-auto py-20 relative z-10 grid md:grid-cols-2 gap-12 items-center" style="padding-left: 60px; padding-right: 60px;">
-      <div>
-        <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 leading-tight">
-          Big or small, we roof them all.
-        </h1>
-        <p class="text-xl text-light-blue mb-8">
-          Metal, shingle, tile and flat
-        </p>
-        <a href="#contact" class="inline-block bg-orange text-white px-8 py-3 rounded font-semibold hover:bg-orange/90 transition">
-          Get estimate
-        </a>
+      <div class="order-2 md:order-1 h-96 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg flex items-center justify-center text-gray-400 font-serif text-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%); color: #C86432;">
+        [Premium roof imagery]
       </div>
-      <div class="hidden md:block h-96 bg-light-bg rounded-lg flex items-center justify-center text-navy font-semibold">
-        [Hero Image]
+      <div class="order-1 md:order-2 text-white">
+        <p class="text-sm font-semibold mb-4" style="color: #F4EDE4; letter-spacing: 2px; text-transform: uppercase;">Roofing Excellence</p>
+        <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          Southwest Florida's trusted roofing partner since 2009.
+        </h1>
+        <p class="text-lg mb-8" style="color: #E8DDD2;">
+          Professional craftsmanship for metal, shingle, tile, and flat roofs. Locally owned. Built to last.
+        </p>
+        <a href="#contact" class="inline-block text-white px-8 py-3 rounded font-semibold transition hover:opacity-90" style="background-color: #C86432;">
+          Get Free Estimate
+        </a>
       </div>
     </div>
   </section>

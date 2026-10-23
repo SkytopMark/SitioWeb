@@ -1,5 +1,5 @@
 <template>
-  <footer style="background-color: rgba(10, 37, 64, 0.85); border-color: rgba(255, 255, 255, 0.2); color: #FFFFFF;" class="text-white py-8 border-t">
+  <footer style="background-color: #2B2B2B; border-color: rgba(255, 255, 255, 0.1); color: #FFFFFF;" class="text-white py-8 border-t">
     <div class="max-w-6xl mx-auto py-8" style="padding-left: 60px; padding-right: 60px;">
       <div class="grid md:grid-cols-3 gap-8 mb-8">
         <div>
