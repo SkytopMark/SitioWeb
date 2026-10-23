@@ -1,35 +1,37 @@
 <template>
-  <section id="areas" style="background-color: #F5F5F5;" class="py-20">
-    <div class="max-w-6xl mx-auto py-20" style="padding-left: 60px; padding-right: 60px;">
-      <h2 class="font-display text-4xl font-bold mb-4 text-center" style="color: #0A2540;">
-        Where we work
+  <section style="background-color: #FFFFFF;" class="py-20">
+    <div class="max-w-6xl mx-auto" style="padding-left: 60px; padding-right: 60px;">
+      <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
+        Service areas across Southwest Florida
       </h2>
       <p class="text-center mb-12 max-w-2xl mx-auto" style="color: #666666;">
-        Serving the Southwest Florida area with professional roofing services.
+        We serve homeowners and businesses throughout the region with local expertise and responsive service.
       </p>
+
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="rounded-lg overflow-hidden shadow-sm">
-          <div class="h-48 flex items-center justify-center text-sm font-semibold" style="background-color: #D5DFE8; color: #0A2540;">
-            [Cape Coral Photo]
-          </div>
-          <div class="bg-white p-4">
-            <h3 class="font-display text-xl font-bold" style="color: #0A2540;">Cape Coral</h3>
-          </div>
+        <div class="md:col-span-2">
+          <div id="map" style="height: 450px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-sm">
-          <div class="h-48 flex items-center justify-center text-sm font-semibold" style="background-color: #D5DFE8; color: #0A2540;">
-            [Fort Myers Photo]
+
+        <div class="space-y-4">
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Cape Coral</h3>
+            <p class="text-sm" style="color: #2B2B2B;">Serving Cape Coral's growing residential market with expert installations.</p>
           </div>
-          <div class="bg-white p-4">
-            <h3 class="font-display text-xl font-bold" style="color: #0A2540;">Fort Myers</h3>
+
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Fort Myers</h3>
+            <p class="text-sm" style="color: #2B2B2B;">Our headquarters and primary service hub for South Lee County.</p>
           </div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-sm">
-          <div class="h-48 flex items-center justify-center text-sm font-semibold" style="background-color: #D5DFE8; color: #0A2540;">
-            [Lehigh Acres Photo]
+
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Naples</h3>
+            <p class="text-sm" style="color: #2B2B2B;">Premium roofing solutions for Naples' luxury residential market.</p>
           </div>
-          <div class="bg-white p-4">
-            <h3 class="font-display text-xl font-bold" style="color: #0A2540;">Lehigh Acres</h3>
+
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Sarasota</h3>
+            <p class="text-sm" style="color: #2B2B2B;">Serving Sarasota County's coastal communities with responsive service.</p>
           </div>
         </div>
       </div>
@@ -38,4 +40,32 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const map = (window as any).L.map('map').setView([26.5, -81.8], 9)
+
+  ;(window as any).L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(map)
+
+  const locations = [
+    { name: 'Cape Coral', lat: 26.5629, lng: -81.9496 },
+    { name: 'Fort Myers', lat: 26.6406, lng: -81.8723 },
+    { name: 'Naples', lat: 26.1411, lng: -81.7948 },
+    { name: 'Sarasota', lat: 27.3364, lng: -82.5305 }
+  ]
+
+  locations.forEach(location => {
+    ;(window as any).L.circleMarker([location.lat, location.lng], {
+      radius: 12,
+      fillColor: '#C86432',
+      color: '#405A7A',
+      weight: 3,
+      opacity: 1,
+      fillOpacity: 0.9
+    }).bindPopup(`<div style="font-family: 'Saira'; font-weight: bold; color: #405A7A;">${location.name}</div>`).addTo(map)
+  })
+})
 </script>
