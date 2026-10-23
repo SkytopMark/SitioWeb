@@ -1,16 +1,13 @@
 <template>
-  <section id="contact" style="background-color: #0A2540;" class="text-white py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="font-display text-4xl font-bold mb-8">
+  <section id="contact" style="background-color: #F58220;" class="py-20">
+    <div class="max-w-3xl mx-auto text-center py-20" style="padding-left: 60px; padding-right: 60px;">
+      <h2 class="font-display text-5xl font-bold mb-4 text-white">
         Request an estimate
       </h2>
-      <p class="text-lg mb-8 max-w-xl mx-auto" style="color: #AEC3D5;">
-        Call us
+      <p class="font-sans text-2xl italic mb-12 text-white" style="font-weight: 300;">
+        Free of charge
       </p>
-      <a href="tel:+12393659939" class="inline-block text-5xl font-bold transition hover:opacity-80 mb-12" style="color: #F58220;">
-        (239) 365-9939
-      </a>
-      <button class="text-white px-8 py-3 rounded font-semibold transition hover:opacity-80" style="background-color: #F58220;">
+      <button class="text-white px-12 py-3 rounded font-semibold transition hover:opacity-80" style="background-color: #0A2540;">
         Get estimate
       </button>
     </div>

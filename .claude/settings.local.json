@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Head -20)",
+      "PowerShell(Get-Process node)",
+      "PowerShell(Stop-Process -Force 2>&1)",
+      "Bash(Get-Process -Name node -ErrorAction SilentlyContinue)",
+      "Bash(Stop-Process -Force)",
+      "Bash(Start-Sleep -Milliseconds 500)",
+      "Bash(curl -s \"http://localhost:3000/\")",
+      "Bash(mkdir -p app/pages)",
+      "Bash(cp pages/index.vue app/pages/index.vue)",
+      "Bash(mkdir -p app/components)",
+      "Bash(cp components/*.vue app/components/)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(mkdir -p app/i18n)",
+      "Bash(cp i18n.config.ts app/i18n.config.ts)",
+      "Bash(curl -s \"http://localhost:3000/_nuxt/app/app.css\")",
+      "PowerShell(Get-Process *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

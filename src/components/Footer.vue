@@ -1,6 +1,6 @@
 <template>
-  <footer style="background-color: rgba(10, 37, 64, 0.5); border-color: rgba(255, 255, 255, 0.1); color: #AEC3D5;" class="text-white py-8 border-t">
-    <div class="max-w-6xl mx-auto px-4">
+  <footer style="background-color: rgba(10, 37, 64, 0.85); border-color: rgba(255, 255, 255, 0.2); color: #FFFFFF;" class="text-white py-8 border-t">
+    <div class="max-w-6xl mx-auto py-8" style="padding-left: 60px; padding-right: 60px;">
       <div class="grid md:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 class="font-display font-bold text-lg mb-4">Skytop Roofing</h3>
@@ -14,7 +14,7 @@
         </div>
         <div>
           <h4 class="font-semibold mb-4">Services</h4>
-          <ul class="space-y-2">
+          <ul class="grid grid-cols-2 gap-2">
             <li><a href="#" class="transition hover:opacity-80">Metal</a></li>
             <li><a href="#" class="transition hover:opacity-80">Shingle</a></li>
             <li><a href="#" class="transition hover:opacity-80">Tile</a></li>

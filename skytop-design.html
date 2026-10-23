@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skytop Roofing — Premium Design Concept</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
+
+        .section { width: 100%; padding: 80px 60px; display: flex; align-items: center; justify-content: center; min-height: 100vh; position: relative; overflow: hidden; }
+        .section h2 { font-size: 48px; font-weight: 300; margin-bottom: 20px; letter-spacing: -1px; }
+        .section p { font-size: 18px; color: #666; max-width: 600px; line-height: 1.8; }
+
+        /* SECTION 1: HERO */
+        .hero { background: linear-gradient(135deg, #0A2540 0%, #0A2540 100%); color: white; position: relative; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="p" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><rect fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" width="100" height="100"/></pattern></defs><rect width="1200" height="600" fill="url(%23p)"/></svg>'); opacity: 0.3; }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .hero h1 { font-size: 72px; font-weight: 300; margin-bottom: 24px; letter-spacing: -2px; line-height: 1.1; }
+        .hero-subtitle { font-size: 24px; color: #AEC3D5; margin-bottom: 40px; font-weight: 300; }
+        .hero-cta { display: inline-block; background: #F58220; color: white; padding: 16px 40px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: opacity 0.3s; }
+        .hero-cta:hover { opacity: 0.8; }
+
+        /* SECTION 2: TRUST BAR */
+        .trust { background: #FFFFFF; padding: 60px 60px; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; align-items: center; }
+        .trust-item { text-align: center; }
+        .trust-number { font-size: 48px; font-weight: 600; color: #F58220; }
+        .trust-label { font-size: 14px; color: #666; margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* SECTION 3: SERVICES */
+        .services { background: #F5F5F5; padding: 80px 60px; }
+        .services-intro { margin-bottom: 60px; }
+        .services-intro h2 { color: #0A2540; margin-bottom: 16px; }
+        .services-intro p { color: #666; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        .service-card { background: white; padding: 48px 40px; border-radius: 8px; border: 1px solid #E5E5E5; }
+        .service-icon { font-size: 36px; margin-bottom: 16px; }
+        .service-card h3 { font-size: 24px; color: #0A2540; margin-bottom: 12px; font-weight: 600; }
+        .service-card p { color: #666; font-size: 16px; }
+
+        /* SECTION 4: PROCESS */
+        .process { background: #0A2540; color: white; padding: 80px 60px; }
+        .process h2 { color: white; margin-bottom: 60px; }
+        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .step { text-align: center; }
+        .step-number { font-size: 56px; font-weight: 300; color: #F58220; margin-bottom: 16px; }
+        .step h3 { font-size: 18px; margin-bottom: 12px; font-weight: 600; }
+        .step p { font-size: 14px; color: #AEC3D5; }
+
+        /* SECTION 5: PORTFOLIO */
+        .portfolio { background: white; padding: 80px 60px; }
+        .portfolio h2 { color: #0A2540; margin-bottom: 60px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .portfolio-item { background: linear-gradient(135deg, #D5DFE8 0%, #AEC3D5 100%); aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #0A2540; font-weight: 600; }
+
+        /* SECTION 6: TESTIMONIALS */
+        .testimonials { background: #F5F5F5; padding: 80px 60px; }
+        .testimonials h2 { color: #0A2540; margin-bottom: 60px; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        .testimonial { background: white; padding: 32px; border-radius: 8px; border-left: 4px solid #F58220; }
+        .testimonial p { color: #666; font-size: 16px; margin-bottom: 16px; font-style: italic; }
+        .testimonial-author { color: #0A2540; font-weight: 600; font-size: 14px; }
+
+        /* SECTION 7: CTA */
+        .cta { background: #F58220; color: white; padding: 120px 60px; text-align: center; }
+        .cta h2 { color: white; font-size: 56px; margin-bottom: 24px; }
+        .cta p { font-size: 20px; margin-bottom: 40px; }
+        .cta-button { display: inline-block; background: #0A2540; color: white; padding: 18px 50px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: opacity 0.3s; }
+        .cta-button:hover { opacity: 0.8; }
+
+        /* SECTION 8: FOOTER */
+        .footer { background: rgba(10, 37, 64, 0.85); color: white; padding: 60px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+        .footer-col h4 { margin-bottom: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #AEC3D5; }
+        .footer-col p { font-size: 14px; color: #AEC3D5; line-height: 1.8; }
+        .footer-col a { color: #AEC3D5; text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-col a:hover { opacity: 0.7; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 40px; margin-top: 40px; text-align: center; font-size: 12px; color: #AEC3D5; }
+
+        /* Label */
+        .section-label { position: absolute; top: 20px; left: 60px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: rgba(0,0,0,0.3); font-weight: 600; }
+        .section.dark .section-label { color: rgba(255,255,255,0.2); }
+    </style>
+</head>
+<body>
+    <!-- SECTION 1: HERO -->
+    <section class="section hero">
+        <span class="section-label">Section 1/8: Hero</span>
+        <div class="hero-content">
+            <h1>Built to last. Crafted to impress.</h1>
+            <p class="hero-subtitle">Premium roofing solutions for Southwest Florida homes and businesses.</p>
+            <a href="#" class="hero-cta">Get Your Free Estimate</a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TRUST BAR -->
+    <section class="section trust">
+        <span class="section-label">Section 2/8: Trust Bar</span>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="trust-number">15+</div>
+                <div class="trust-label">Years Experience</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">2,500+</div>
+                <div class="trust-label">Roofs Completed</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">98%</div>
+                <div class="trust-label">Customer Satisfaction</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">24/7</div>
+                <div class="trust-label">Emergency Service</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES -->
+    <section class="section services">
+        <span class="section-label">Section 3/8: Services</span>
+        <div class="services-intro">
+            <h2>Roofing for Every Need</h2>
+            <p>Expert installation and repair for metal, shingle, tile, and flat roofs.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Metal Roofing</h3>
+                <p>Durable, energy-efficient protection that lasts decades. Perfect for modern homes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔨</div>
+                <h3>Shingle Roofing</h3>
+                <p>Classic beauty with proven durability. Available in premium architectural grades.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Tile Roofing</h3>
+                <p>Timeless elegance and exceptional longevity. Perfect for coastal properties.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <h3>Flat Roofing</h3>
+                <p>Modern solutions for contemporary buildings. Waterproof and maintenance-friendly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROCESS -->
+    <section class="section process dark">
+        <span class="section-label">Section 4/8: Process</span>
+        <h2>How We Work</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Inspect</h3>
+                <p>Detailed roof assessment & free estimate</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Plan</h3>
+                <p>Custom solution tailored to your needs</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Build</h3>
+                <p>Expert installation with quality assurance</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Protect</h3>
+                <p>Long-term warranty & ongoing support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PORTFOLIO -->
+    <section class="section portfolio">
+        <span class="section-label">Section 5/8: Portfolio</span>
+        <h2>Recent Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Modern Metal Roof</div>
+            <div class="portfolio-item">Coastal Tile Installation</div>
+            <div class="portfolio-item">Commercial Flat Roof</div>
+            <div class="portfolio-item">Shingle Replacement</div>
+            <div class="portfolio-item">Historic Restoration</div>
+            <div class="portfolio-item">Storm Damage Repair</div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: TESTIMONIALS -->
+    <section class="section testimonials">
+        <span class="section-label">Section 6/8: Testimonials</span>
+        <h2>Trusted by Homeowners</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Skytop completely transformed our home. Professional, punctual, and built to last. Highly recommended!"</p>
+                <div class="testimonial-author">— Sarah M., Cape Coral</div>
+            </div>
+            <div class="testimonial">
+                <p>"The best roofing company in Southwest Florida. Their attention to detail is incredible. Worth every penny."</p>
+                <div class="testimonial-author">— James T., Fort Myers</div>
+            </div>
+            <div class="testimonial">
+                <p>"After the hurricane, Skytop got us back on our feet fast. Excellent work and fair pricing."</p>
+                <div class="testimonial-author">— Maria G., Lehigh Acres</div>
+            </div>
+            <div class="testimonial">
+                <p>"Finally found a roofing company that treats you like family. 10/10 experience from start to finish."</p>
+                <div class="testimonial-author">— Robert P., Sanibel</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CTA -->
+    <section class="section cta">
+        <span class="section-label">Section 7/8: Final CTA</span>
+        <h2>Ready to Protect Your Home?</h2>
+        <p>Get a free, no-obligation estimate from Florida's most trusted roofing experts.</p>
+        <a href="#" class="cta-button">Request Free Estimate</a>
+    </section>
+
+    <!-- SECTION 8: FOOTER -->
+    <section class="section footer">
+        <span class="section-label">Section 8/8: Footer</span>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <p>Skytop Roofing has been protecting Southwest Florida homes for over 15 years with unmatched craftsmanship and reliability.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:+12393659939">(239) 365-9939</a>
+                <p>Available 24/7 for emergencies</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Metal Roofing</a>
+                <a href="#">Shingle Roofing</a>
+                <a href="#">Tile Roofing</a>
+                <a href="#">Flat Roofing</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Skytop Roofing. All rights reserved. Built with premium craftsmanship.</p>
+        </div>
+    </section>
+</body>
+</html>

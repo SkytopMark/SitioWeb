@@ -1,6 +1,6 @@
 <template>
   <section id="process" style="background-color: #0A2540;" class="text-white py-20">
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4" style="padding-left: 60px; padding-right: 60px;">
       <h2 class="font-display text-4xl font-bold mb-2 text-center">
         What happens after you call
       </h2>
@@ -8,21 +8,25 @@
         Four steps, in this order, from first call to finished roof.
       </p>
       <div class="grid md:grid-cols-4 gap-6">
-        <div class="text-center">
-          <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 font-display font-bold text-2xl" style="background-color: #F58220; color: white;">1</div>
-          <h3 class="font-display text-xl font-bold">Call</h3>
+        <div class="rounded-lg p-6" style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+          <div class="font-display font-bold text-3xl mb-3" style="color: #F58220;">1</div>
+          <h3 class="font-display text-lg font-bold mb-2">Call</h3>
+          <p class="text-sm" style="color: #AEC3D5;">Reach out to schedule your free roofing inspection and discuss your needs.</p>
         </div>
-        <div class="text-center">
-          <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 font-display font-bold text-2xl" style="background-color: #F58220; color: white;">2</div>
-          <h3 class="font-display text-xl font-bold">Estimate</h3>
+        <div class="rounded-lg p-6" style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+          <div class="font-display font-bold text-3xl mb-3" style="color: #F58220;">2</div>
+          <h3 class="font-display text-lg font-bold mb-2">Estimate</h3>
+          <p class="text-sm" style="color: #AEC3D5;">Our team provides a detailed and transparent estimate for your roofing project.</p>
         </div>
-        <div class="text-center">
-          <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 font-display font-bold text-2xl" style="background-color: #F58220; color: white;">3</div>
-          <h3 class="font-display text-xl font-bold">Work</h3>
+        <div class="rounded-lg p-6" style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+          <div class="font-display font-bold text-3xl mb-3" style="color: #F58220;">3</div>
+          <h3 class="font-display text-lg font-bold mb-2">Work</h3>
+          <p class="text-sm" style="color: #AEC3D5;">We complete your roofing installation with professional craftsmanship and attention to detail.</p>
         </div>
-        <div class="text-center">
-          <div class="rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 font-display font-bold text-2xl" style="background-color: #F58220; color: white;">4</div>
-          <h3 class="font-display text-xl font-bold">Finished</h3>
+        <div class="rounded-lg p-6" style="background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+          <div class="font-display font-bold text-3xl mb-3" style="color: #F58220;">4</div>
+          <h3 class="font-display text-lg font-bold mb-2">Finished</h3>
+          <p class="text-sm" style="color: #AEC3D5;">Your new roof is complete and ready to protect your building for years to come.</p>
         </div>
       </div>
     </div>
