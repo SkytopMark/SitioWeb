@@ -1,11 +1,11 @@
 <template>
   <section style="background-color: #F5F5F5;" class="py-20">
     <div class="max-w-6xl mx-auto" style="padding-left: 60px; padding-right: 60px;">
-      <h2 class="font-display text-4xl font-bold mb-4 text-center" style="color: #0A2540;">
-        Trusted by Homeowners
+      <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
+        {{ t('testimonials.headline') }}
       </h2>
       <p class="text-center mb-12 max-w-2xl mx-auto" style="color: #666666;">
-        See what our satisfied customers have to say about their experience with Skytop Roofing.
+        {{ t('testimonials.subtitle') }}
       </p>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg p-8" style="border-left: 4px solid #F58220;">
@@ -46,4 +46,7 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from '../i18n'
+
+const { t } = useI18n()
 </script>
