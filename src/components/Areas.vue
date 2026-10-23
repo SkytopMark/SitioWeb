@@ -4,13 +4,16 @@
       <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
         Service areas across Southwest Florida
       </h2>
-      <p class="text-center mb-12 max-w-2xl mx-auto" style="color: #666666;">
+      <p class="text-center mb-2 max-w-2xl mx-auto" style="color: #666666;">
         We serve homeowners and businesses throughout the region with local expertise and responsive service.
       </p>
+      <p class="text-center mb-12 max-w-2xl mx-auto text-sm" style="color: #999999;">
+        Not limited to these areas — we're happy to discuss expanding our service range to meet your needs.
+      </p>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8" style="position: relative; z-index: 1;">
         <div class="md:col-span-2">
-          <div id="map" style="height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+          <div id="map" style="height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
         </div>
 
         <div class="space-y-4" ref="cardsContainer">
@@ -58,13 +61,25 @@ onMounted(() => {
   ]
 
   locations.forEach(location => {
+    // Add service area circle (25km radius)
+    ;(window as any).L.circle([location.lat, location.lng], {
+      radius: 25000, // 25 kilometers
+      color: '#C86432',
+      weight: 2,
+      opacity: 0.7,
+      fill: true,
+      fillColor: '#C86432',
+      fillOpacity: 0.1
+    }).bindPopup(`<div style="font-family: 'Saira'; font-weight: bold; color: #405A7A;">${location.name}</div>`).addTo(map)
+
+    // Add center marker
     ;(window as any).L.circleMarker([location.lat, location.lng], {
-      radius: 12,
+      radius: 8,
       fillColor: '#C86432',
       color: '#405A7A',
-      weight: 3,
+      weight: 2,
       opacity: 1,
-      fillOpacity: 0.9
+      fillOpacity: 1
     }).bindPopup(`<div style="font-family: 'Saira'; font-weight: bold; color: #405A7A;">${location.name}</div>`).addTo(map)
   })
 })
