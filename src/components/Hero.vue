@@ -7,7 +7,7 @@
       </div>
       <div class="order-1 md:order-2 text-white">
         <p class="text-sm font-semibold mb-4" style="color: #F4EDE4; letter-spacing: 2px; text-transform: uppercase;">Roofing Excellence</p>
-        <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" style="font-family: 'Saira';">
           Southwest Florida's trusted roofing partner since 2009.
         </h1>
         <p class="text-lg mb-8" style="color: #E8DDD2;">
