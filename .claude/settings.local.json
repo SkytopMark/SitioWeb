@@ -19,7 +19,9 @@
       "PowerShell(Get-Process *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(git commit -m 'Simplify Tailwind CSS v4 configuration *)"
     ]
   }
 }
