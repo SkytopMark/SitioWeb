@@ -14,6 +14,7 @@
           :key="service.id"
           :title="service.title"
           :description="service.description"
+          :image="service.image"
         />
       </div>
     </div>
@@ -25,22 +26,26 @@ const services = [
   {
     id: 1,
     title: 'Metal roofing',
-    description: 'Durable metal roofs designed for longevity and weather resistance.'
+    description: 'Durable metal roofs designed for longevity and weather resistance.',
+    image: '/images/services/metal-roofing.jpg'
   },
   {
     id: 2,
     title: 'Shingle roofing',
-    description: 'Classic shingle roofing with superior protection and curb appeal.'
+    description: 'Classic shingle roofing with superior protection and curb appeal.',
+    image: '/images/services/shingle-roofing.jpg'
   },
   {
     id: 3,
     title: 'Tile roofing',
-    description: 'Beautiful tile roofs offering elegance and exceptional durability.'
+    description: 'Beautiful tile roofs offering elegance and exceptional durability.',
+    image: '/images/services/tile-roofing.jpg'
   },
   {
     id: 4,
     title: 'Flat roofing',
-    description: 'Modern flat roofing solutions perfect for contemporary buildings.'
+    description: 'Modern flat roofing solutions perfect for contemporary buildings.',
+    image: '/images/services/flat-roofing.jpg'
   }
 ]
 </script>

@@ -1,9 +1,9 @@
 <template>
   <header class="bg-navy text-white sticky top-0 z-50">
     <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="font-display font-bold text-xl">
-        <NuxtLink to="/" class="text-white hover:text-orange transition">
-          Skytop
+      <div class="h-12">
+        <NuxtLink to="/" class="flex items-center h-full hover:opacity-80 transition">
+          <img src="/images/logo/logo.svg" alt="Skytop Roofing" class="h-full max-w-xs" />
         </NuxtLink>
       </div>
 

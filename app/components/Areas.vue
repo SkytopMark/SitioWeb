@@ -13,6 +13,7 @@
           v-for="area in areas"
           :key="area.code"
           :city="area.label()"
+          :image="area.image"
         />
       </div>
     </div>
@@ -21,8 +22,8 @@
 
 <script setup lang="ts">
 const areas = [
-  { code: 'capeCoral', label: () => 'Cape Coral' },
-  { code: 'fortMyers', label: () => 'Fort Myers' },
-  { code: 'lehighAcres', label: () => 'Lehigh Acres' }
+  { code: 'capeCoral', label: () => 'Cape Coral', image: '/images/areas/cape-coral.jpg' },
+  { code: 'fortMyers', label: () => 'Fort Myers', image: '/images/areas/fort-myers.jpg' },
+  { code: 'lehighAcres', label: () => 'Lehigh Acres', image: '/images/areas/lehigh-acres.jpg' }
 ]
 </script>
