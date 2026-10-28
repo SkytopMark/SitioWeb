@@ -6,11 +6,10 @@
         [Premium roof imagery]
       </div>
       <div class="order-1 md:order-2 text-white">
-        <p class="text-sm font-semibold mb-4" style="color: #F4EDE4; letter-spacing: 2px; text-transform: uppercase;">{{ t('hero.label') }}</p>
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" style="font-family: 'Saira';">
           {{ t('hero.headline') }}
         </h1>
-        <p class="text-lg mb-8" style="color: #E8DDD2;">
+        <p class="text-lg mb-8 max-w-xl" style="color: #E8DDD2; line-height: 1.6;">
           {{ t('hero.subtitle') }}
         </p>
         <a href="#contact" class="inline-block text-white px-8 py-3 rounded font-semibold transition hover:opacity-90" style="background-color: #C86432;">

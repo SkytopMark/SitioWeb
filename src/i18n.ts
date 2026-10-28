@@ -9,9 +9,9 @@ export const translations = {
     },
     hero: {
       label: 'Roofing Excellence',
-      headline: 'Southwest Florida\'s trusted roofing partner since 2009.',
-      subtitle: 'Professional craftsmanship for metal, shingle, tile, and flat roofs. Locally owned. Built to last.',
-      cta: 'Get Free Estimate'
+      headline: 'Big or Small we roof them all',
+      subtitle: 'From inspection to installation, professional roofing for every home in Southwest Florida.',
+      cta: 'Get Your Free Roof Assessment'
     },
     trustBar: {
       experience: 'Years in business',
@@ -20,8 +20,8 @@ export const translations = {
       emergency: 'Emergency response'
     },
     services: {
-      headline: 'Four roofing solutions',
-      subtitle: 'Each system built to handle Southwest Florida\'s climate and protect your investment for decades.',
+      headline: 'Four proven roof types',
+      subtitle: 'Choose the solution that matches your home\'s needs and climate in Southwest Florida.',
       metal: {
         name: 'Metal roofing',
         desc: 'Engineered for Florida\'s salt air and hurricane seasons. Energy efficient and engineered to last 40+ years.'
@@ -96,9 +96,9 @@ export const translations = {
     },
     hero: {
       label: 'Excelencia en Techos',
-      headline: 'El socio de techos de confianza de Southwest Florida desde 2009.',
-      subtitle: 'Artesanía profesional para techos de metal, tejas, baldosas y planos. Localmente propiedad. Construido para durar.',
-      cta: 'Obtener Estimado Gratis'
+      headline: 'Pequeño o grande, techos para todos',
+      subtitle: 'Desde inspección hasta instalación, techos profesionales para cada hogar en Southwest Florida.',
+      cta: 'Obtén Tu Evaluación de Techo Gratis'
     },
     trustBar: {
       experience: 'Años en el negocio',
@@ -107,8 +107,8 @@ export const translations = {
       emergency: 'Respuesta de emergencia'
     },
     services: {
-      headline: 'Cuatro soluciones de techos',
-      subtitle: 'Cada sistema construido para manejar el clima de Southwest Florida y proteger su inversión durante décadas.',
+      headline: 'Cuatro tipos de techo comprobados',
+      subtitle: 'Elige la solución que se adapte a las necesidades y clima de tu hogar en Southwest Florida.',
       metal: {
         name: 'Techos de metal',
         desc: 'Diseñado para el aire salado de Florida y las temporadas de huracanes. Eficiente en energía y diseñado para durar 40+ años.'

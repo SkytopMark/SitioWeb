@@ -21,7 +21,11 @@
       "Bash(git commit -m ' *)",
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "Bash(git commit -m 'Simplify Tailwind CSS v4 configuration *)"
+      "Bash(git commit -m 'Simplify Tailwind CSS v4 configuration *)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(cd *)",
+      "Bash(mkdir -p .taste-skill)"
     ]
   }
 }

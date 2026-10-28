@@ -1,8 +1,9 @@
 <template>
   <header style="background-color: #0A2540;" class="text-white sticky top-0 z-50">
     <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between" style="padding-left: 60px; padding-right: 60px;">
-      <div class="font-display font-bold text-xl text-white flex-shrink-0">
-        Skytop
+      <div class="flex flex-col items-center gap-0.5 flex-shrink-0">
+        <div class="font-display font-bold text-xl text-white">Skytop</div>
+        <div class="text-xs font-semibold" style="color: #C86432; letter-spacing: 0.5px;">Big or Small we roof them all</div>
       </div>
 
       <div class="hidden md:flex gap-6 text-sm absolute left-1/2 transform -translate-x-1/2">
