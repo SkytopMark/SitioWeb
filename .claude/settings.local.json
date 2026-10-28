@@ -27,7 +27,9 @@
       "Bash(cd *)",
       "Bash(mkdir -p .taste-skill)",
       "Bash(dir /s /b)",
-      "PowerShell(Get-ChildItem -Path \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\\\\src\\\\assets\" -Recurse -Directory | Sort-Object FullName | ForEach-Object { \"├── \" + $_.Name })"
+      "PowerShell(Get-ChildItem -Path \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\\\\src\\\\assets\" -Recurse -Directory | Sort-Object FullName | ForEach-Object { \"├── \" + $_.Name })",
+      "Bash(cp src/assets/logos/*.png public/images/logos/)",
+      "Bash(cp src/assets/icons/*.png public/images/icons/)"
     ]
   }
 }
