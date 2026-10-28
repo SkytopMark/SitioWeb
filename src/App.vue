@@ -1,14 +1,18 @@
 <template>
-  <div style="background-color: #F5F5F5;">
+  <div>
     <Header />
-    <Hero />
-    <TrustBar />
-    <Services />
-    <Process />
-    <Portfolio />
-    <Testimonials />
-    <Areas />
-    <Contact />
+    <div style="padding-top: 60px; background-color: #405A7A;">
+      <Hero />
+    </div>
+    <div style="background-color: #F5F5F5;">
+      <TrustBar />
+      <Services />
+      <Process />
+      <Portfolio />
+      <Testimonials />
+      <Areas />
+      <Contact />
+    </div>
     <Footer />
   </div>
 </template>
