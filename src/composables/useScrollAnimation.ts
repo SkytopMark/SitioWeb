@@ -24,16 +24,20 @@ export function useScrollAnimation(threshold = 0.1) {
           const element = entry.target as HTMLElement
           const animationType = element.getAttribute('data-animate') || 'fade-in-up'
 
-          // Animate when scrolling down and element enters view
-          if (entry.isIntersecting && entry.intersectionRatio > threshold && scrollDirection === 'down') {
-            // Reset animation by removing and re-adding class
-            element.classList.remove(`animate-${animationType}`)
-            void element.offsetWidth // Trigger reflow to restart animation
-            element.classList.add(`animate-${animationType}`)
-            element.classList.remove('opacity-0')
+          // Check if element already has animation
+          const isAnimated = element.classList.contains(`animate-${animationType}`)
+
+          // Animate if in view and (hasn't animated yet OR scrolling down)
+          if (entry.isIntersecting && entry.intersectionRatio > threshold) {
+            if (!isAnimated || scrollDirection === 'down') {
+              element.classList.remove(`animate-${animationType}`)
+              void element.offsetWidth // Trigger reflow to restart animation
+              element.classList.add(`animate-${animationType}`)
+              element.classList.remove('opacity-0')
+            }
           }
           // Reset to invisible when scrolling up and leaving view
-          else if (!entry.isIntersecting && scrollDirection === 'up') {
+          else if (!entry.isIntersecting && scrollDirection === 'up' && isAnimated) {
             element.classList.remove(`animate-${animationType}`)
             element.classList.add('opacity-0')
           }
