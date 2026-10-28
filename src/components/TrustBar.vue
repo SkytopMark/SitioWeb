@@ -1,6 +1,6 @@
 <template>
   <section style="background-color: #F4EDE4; border-color: #E8DDD2;" class="py-20 border-b">
-    <div class="max-w-6xl mx-auto" style="padding-left: 60px; padding-right: 60px;">
+    <div class="max-w-6xl mx-auto" style="padding-left: 40px; padding-right: 40px;">
       <div class="grid md:grid-cols-4 gap-8">
         <div class="text-center">
           <div class="text-5xl font-bold mb-2" style="color: #405A7A; font-family: 'Saira';">15+</div>

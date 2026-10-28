@@ -1,6 +1,6 @@
 <template>
   <section style="background-color: #FFFFFF;" class="py-20">
-    <div class="max-w-6xl mx-auto" style="padding-left: 60px; padding-right: 60px;">
+    <div class="max-w-6xl mx-auto" style="padding-left: 40px; padding-right: 40px;">
       <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
         {{ t('areas.headline') }}
       </h2>

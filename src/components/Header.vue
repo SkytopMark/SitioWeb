@@ -1,6 +1,6 @@
 <template>
   <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white border-opacity-10">
-    <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-8" style="padding-left: 60px; padding-right: 60px;">
+    <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-8" style="padding-left: 40px; padding-right: 40px;">
       <div class="flex items-center gap-2 flex-shrink-0">
         <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" style="height: 40px; width: auto;">
       </div>

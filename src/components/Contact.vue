@@ -1,6 +1,6 @@
 <template>
   <section id="contact" style="background-color: #C86432;" class="py-20">
-    <div class="max-w-3xl mx-auto text-center py-20" style="padding-left: 60px; padding-right: 60px;">
+    <div class="max-w-3xl mx-auto text-center py-20" style="padding-left: 40px; padding-right: 40px;">
       <h2 class="text-5xl font-bold mb-4 text-white" style="font-family: 'Saira';">
         {{ t('contact.headline') }}
       </h2>

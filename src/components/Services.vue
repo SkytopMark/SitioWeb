@@ -1,6 +1,6 @@
 <template>
   <section id="services" style="background-color: #F5F5F5;" class="py-20">
-    <div class="max-w-6xl mx-auto py-20" style="padding-left: 60px; padding-right: 60px;">
+    <div class="max-w-6xl mx-auto py-20" style="padding-left: 40px; padding-right: 40px;">
       <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
         {{ t('services.headline') }}
       </h2>
