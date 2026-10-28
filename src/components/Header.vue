@@ -1,16 +1,16 @@
 <template>
-  <header style="background-color: #0A2540;" class="text-white sticky top-0 z-50">
+  <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white sticky top-0 z-50 border-b border-white border-opacity-10">
     <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-8" style="padding-left: 60px; padding-right: 60px;">
       <div class="flex items-center gap-2 flex-shrink-0">
         <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" style="height: 40px; width: auto;">
       </div>
 
-      <div class="hidden md:flex gap-8 text-sm flex-1 justify-center">
-        <a href="#" class="hover:opacity-70 transition font-medium">{{ t('header.home') }}</a>
-        <a href="#services" class="hover:opacity-70 transition font-medium">{{ t('header.services') }}</a>
-        <a href="#areas" class="hover:opacity-70 transition font-medium">{{ t('header.areas') }}</a>
-        <a href="#contact" class="hover:opacity-70 transition font-medium">{{ t('header.contact') }}</a>
-      </div>
+      <nav class="hidden md:flex gap-10 text-base flex-1 justify-center">
+        <a href="#" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.home') }}</a>
+        <a href="#services" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.services') }}</a>
+        <a href="#areas" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.areas') }}</a>
+        <a href="#contact" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.contact') }}</a>
+      </nav>
 
       <div class="flex items-center gap-4 flex-shrink-0">
         <div class="flex items-center gap-2">
