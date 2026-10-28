@@ -18,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import { useScrollAnimation } from './composables/useScrollAnimation'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import TrustBar from './components/TrustBar.vue'
@@ -28,4 +29,6 @@ import Testimonials from './components/Testimonials.vue'
 import Areas from './components/Areas.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+
+useScrollAnimation(0.15)
 </script>
