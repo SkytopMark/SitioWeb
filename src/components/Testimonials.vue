@@ -8,7 +8,7 @@
         {{ t('testimonials.subtitle') }}
       </p>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-lg p-8" style="border-left: 4px solid #F58220;">
+        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 opacity-0" style="border-left: 4px solid #F58220;">
           <p class="mb-4" style="color: #666666; font-style: italic; font-size: 16px;">
             "Skytop completely transformed our home. Professional, punctual, and built to last. Highly recommended!"
           </p>
@@ -16,7 +16,7 @@
             — Sarah M., Cape Coral
           </p>
         </div>
-        <div class="bg-white rounded-lg p-8" style="border-left: 4px solid #F58220;">
+        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 opacity-0" style="border-left: 4px solid #F58220;">
           <p class="mb-4" style="color: #666666; font-style: italic; font-size: 16px;">
             "The best roofing company in Southwest Florida. Their attention to detail is incredible. Worth every penny."
           </p>
@@ -24,7 +24,7 @@
             — James T., Fort Myers
           </p>
         </div>
-        <div class="bg-white rounded-lg p-8" style="border-left: 4px solid #F58220;">
+        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 opacity-0" style="border-left: 4px solid #F58220;">
           <p class="mb-4" style="color: #666666; font-style: italic; font-size: 16px;">
             "After the hurricane, Skytop got us back on our feet fast. Excellent work and fair pricing."
           </p>
@@ -32,7 +32,7 @@
             — Maria G., Lehigh Acres
           </p>
         </div>
-        <div class="bg-white rounded-lg p-8" style="border-left: 4px solid #F58220;">
+        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 opacity-0" style="border-left: 4px solid #F58220;">
           <p class="mb-4" style="color: #666666; font-style: italic; font-size: 16px;">
             "Finally found a roofing company that treats you like family. 10/10 experience from start to finish."
           </p>
