@@ -25,7 +25,9 @@
       "WebFetch(domain:localhost)",
       "Bash(curl -s http://localhost:5173/)",
       "Bash(cd *)",
-      "Bash(mkdir -p .taste-skill)"
+      "Bash(mkdir -p .taste-skill)",
+      "Bash(dir /s /b)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\\\\src\\\\assets\" -Recurse -Directory | Sort-Object FullName | ForEach-Object { \"├── \" + $_.Name })"
     ]
   }
 }

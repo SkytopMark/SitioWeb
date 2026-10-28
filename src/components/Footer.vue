@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto py-8" style="padding-left: 60px; padding-right: 60px;">
       <div class="grid md:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 class="font-display font-bold text-lg mb-4">Skytop Roofing</h3>
+          <img src="@/assets/logos/Icono Horizontal Blanco.png" alt="Skytop Roofing" style="height: 32px; width: auto; margin-bottom: 16px;">
           <p>{{ t('footer.companyDesc') }}</p>
         </div>
         <div>
