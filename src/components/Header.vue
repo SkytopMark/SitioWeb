@@ -2,7 +2,7 @@
   <header style="background-color: #0A2540;" class="text-white sticky top-0 z-50">
     <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between" style="padding-left: 60px; padding-right: 60px;">
       <div class="flex items-center gap-2 flex-shrink-0">
-        <img src="@/assets/logos/Icono Horizontal Blanco.png" alt="Skytop Roofing" style="height: 40px; width: auto;">
+        <img src="@/assets/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" style="height: 40px; width: auto;">
       </div>
 
       <div class="hidden md:flex gap-6 text-sm absolute left-1/2 transform -translate-x-1/2">
