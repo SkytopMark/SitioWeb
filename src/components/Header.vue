@@ -1,18 +1,18 @@
 <template>
   <header style="background-color: #0A2540;" class="text-white sticky top-0 z-50">
-    <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between" style="padding-left: 60px; padding-right: 60px;">
+    <nav class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-8" style="padding-left: 60px; padding-right: 60px;">
       <div class="flex items-center gap-2 flex-shrink-0">
         <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" style="height: 40px; width: auto;">
       </div>
 
-      <div class="hidden md:flex gap-6 text-sm absolute left-1/2 transform -translate-x-1/2">
-        <a href="#" class="hover:opacity-70 transition">{{ t('header.home') }}</a>
-        <a href="#services" class="hover:opacity-70 transition">{{ t('header.services') }}</a>
-        <a href="#areas" class="hover:opacity-70 transition">{{ t('header.areas') }}</a>
-        <a href="#contact" class="hover:opacity-70 transition">{{ t('header.contact') }}</a>
+      <div class="hidden md:flex gap-8 text-sm flex-1 justify-center">
+        <a href="#" class="hover:opacity-70 transition font-medium">{{ t('header.home') }}</a>
+        <a href="#services" class="hover:opacity-70 transition font-medium">{{ t('header.services') }}</a>
+        <a href="#areas" class="hover:opacity-70 transition font-medium">{{ t('header.areas') }}</a>
+        <a href="#contact" class="hover:opacity-70 transition font-medium">{{ t('header.contact') }}</a>
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 flex-shrink-0">
         <div class="flex items-center gap-2">
           <button
             @click="changeLanguage('en')"
