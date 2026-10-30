@@ -18,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { useScrollAnimation } from './composables/useScrollAnimation'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
@@ -31,4 +32,8 @@ import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
 useScrollAnimation(0.15)
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 </script>

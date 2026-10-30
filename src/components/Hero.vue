@@ -1,11 +1,11 @@
 <template>
-  <section class="relative min-h-screen flex items-center" style="background: linear-gradient(135deg, #405A7A 0%, #405A7A 100%);">
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.6);">
+      <source src="/images/hero/hero.mp4" type="video/mp4">
+    </video>
     <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><defs><pattern id=%22p%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><rect fill=%22none%22 stroke=%22rgba(255,255,255,0.1)%22 stroke-width=%221%22 width=%22100%22 height=%22100%22/></pattern></defs><rect width=%221200%22 height=%22600%22 fill=%22url(%23p)%22/></svg>')"></div>
     <div class="max-w-6xl mx-auto py-20 relative z-10 grid md:grid-cols-2 gap-12 items-center" style="padding-left: 40px; padding-right: 40px;">
-      <div data-animate="fade-in-up" class="order-2 md:order-1 opacity-0 h-96 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg flex items-center justify-center text-gray-400 font-serif text-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%); color: #C86432;">
-        [Premium roof imagery]
-      </div>
-      <div data-animate="fade-in-up" class="order-1 md:order-2 opacity-0 text-white">
+      <div data-animate="fade-in-up" class="order-1 md:order-2 opacity-0 text-white p-8 rounded-lg" style="background-color: rgba(0, 0, 0, 0.4);">
         <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" style="font-family: 'Saira';">
           {{ t('hero.headline') }}
         </h1>

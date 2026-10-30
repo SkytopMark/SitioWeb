@@ -8,25 +8,37 @@
         {{ t('services.subtitle') }}
       </p>
       <div class="grid md:grid-cols-2 gap-8">
-        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
-          <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.metal.name') }}</h3>
-          <p style="color: #666666;">{{ t('services.metal.desc') }}</p>
-          <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+        <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
+          <img src="/images/services/1.jpg" alt="Metal Roof" class="w-full h-48 object-cover">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.metal.name') }}</h3>
+            <p style="color: #666666;">{{ t('services.metal.desc') }}</p>
+            <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+          </div>
         </div>
-        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
-          <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.shingle.name') }}</h3>
-          <p style="color: #666666;">{{ t('services.shingle.desc') }}</p>
-          <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+        <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
+          <img src="/images/services/2.jpg" alt="Shingle Roof" class="w-full h-48 object-cover">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.shingle.name') }}</h3>
+            <p style="color: #666666;">{{ t('services.shingle.desc') }}</p>
+            <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+          </div>
         </div>
-        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
-          <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.tile.name') }}</h3>
-          <p style="color: #666666;">{{ t('services.tile.desc') }}</p>
-          <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+        <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
+          <img src="/images/services/3.jpg" alt="Tile Roof" class="w-full h-48 object-cover">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.tile.name') }}</h3>
+            <p style="color: #666666;">{{ t('services.tile.desc') }}</p>
+            <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+          </div>
         </div>
-        <div data-animate="fade-in-up" class="bg-white rounded-lg p-8 shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
-          <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.flat.name') }}</h3>
-          <p style="color: #666666;">{{ t('services.flat.desc') }}</p>
-          <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+        <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
+          <img src="/images/services/4.jpg" alt="Flat Roof" class="w-full h-48 object-cover">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.flat.name') }}</h3>
+            <p style="color: #666666;">{{ t('services.flat.desc') }}</p>
+            <button class="font-semibold mt-4 transition" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+          </div>
         </div>
       </div>
     </div>
