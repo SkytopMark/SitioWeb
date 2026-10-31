@@ -58,14 +58,3 @@ export function useScrollAnimation(threshold = 0.1) {
   return { elementsToAnimate }
 }
 
-export function useStaggerAnimation(selector: string) {
-  onMounted(() => {
-    const elements = document.querySelectorAll(selector)
-
-    elements.forEach((element, index) => {
-      const el = element as HTMLElement
-      el.style.opacity = '0'
-      el.style.animation = `fadeInUp 0.6s ease-out ${index * 100 + 200}ms forwards`
-    })
-  })
-}

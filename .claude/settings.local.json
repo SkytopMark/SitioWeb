@@ -29,7 +29,10 @@
       "Bash(dir /s /b)",
       "PowerShell(Get-ChildItem -Path \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\\\\src\\\\assets\" -Recurse -Directory | Sort-Object FullName | ForEach-Object { \"├── \" + $_.Name })",
       "Bash(cp src/assets/logos/*.png public/images/logos/)",
-      "Bash(cp src/assets/icons/*.png public/images/icons/)"
+      "Bash(cp src/assets/icons/*.png public/images/icons/)",
+      "Bash(grep -r \"from ['\\\\\"]./app/\" --include=\"*.vue\" --include=\"*.ts\" --include=\"*.js\" ! -path \"*/node_modules/*\")",
+      "Bash(grep -r \"i18n.config\" --include=\"*.ts\" --include=\"*.js\" ! -path \"*/node_modules/*\")",
+      "PowerShell(cd \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\"; \\(Get-Content tailwind.config.ts\\), \\(Get-Content tailwind.config.js\\) | Select-String -Pattern \"content|src|app|pages\" | Select-Object -First 10)"
     ]
   }
 }
