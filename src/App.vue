@@ -14,12 +14,12 @@
       <Contact ref="contactRef" />
     </div>
     <Footer ref="footerRef" />
-    <ContactModal ref="contactModal" />
+    <ContactModal :isOpen="isModalOpen" @close="closeModal" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, provide } from 'vue'
 import { useScrollAnimation } from './composables/useScrollAnimation'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
@@ -33,13 +33,19 @@ import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import ContactModal from './components/ContactModal.vue'
 
-const contactModal = ref<any>()
+const isModalOpen = ref(false)
+
+const openModal = () => {
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+}
+
+provide('openModal', openModal)
 
 onMounted(() => {
-  ;(window as any).openContactModal = () => {
-    console.log('openContactModal called, contactModal.value:', contactModal.value)
-    contactModal.value?.openModal()
-  }
   window.scrollTo(0, 0)
 })
 

@@ -8,7 +8,7 @@
         {{ t('contact.subtitle') }}
       </p>
       <button
-        @click="() => typeof window !== 'undefined' && (window as any).openContactModal?.()"
+        @click="openModal"
         class="text-white px-8 md:px-12 py-3 rounded font-semibold transition hover:opacity-90 min-h-[44px] inline-flex items-center"
         style="background-color: #2B2B2B;"
       >
@@ -19,7 +19,9 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue'
 import { useI18n } from '../i18n'
 
 const { t } = useI18n()
+const openModal = inject<() => void>('openModal', () => {})
 </script>
