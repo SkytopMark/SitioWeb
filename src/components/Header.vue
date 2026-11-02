@@ -3,14 +3,14 @@
     <nav class="max-w-6xl mx-auto py-0 md:py-3 flex items-center justify-between gap-1 md:gap-6 px-3 md:px-[40px]">
       <!-- Logo Responsivo -->
       <div class="flex items-center flex-shrink-0">
-        <!-- Mobile: Icono Vertical -->
-        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
-        <!-- Desktop: Logo Horizontal -->
-        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block w-32 h-auto">
+        <!-- Mobile: Isotipo -->
+        <img src="/images/logos/isotipo-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
+        <!-- Desktop: Logo Horizontal (max 220px) -->
+        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-12 w-auto" style="max-width: 220px;">
       </div>
 
       <!-- Nav Desktop -->
-      <nav class="hidden md:flex gap-10 text-base flex-1 justify-center">
+      <nav class="hidden lg:flex gap-8 flex-1 justify-center" style="font-size: 14pt;">
         <a href="#" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.home') }}</a>
         <a href="#services" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.services') }}</a>
         <a href="#areas" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.areas') }}</a>
