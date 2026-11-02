@@ -38,7 +38,8 @@
       "Bash(git commit -m 'Fix: Logo desktop sizing with Tailwind CDN-compatible classes *)",
       "Bash(git commit -m 'Logo mobile: Use isotipo-blanco.png for better visibility *)",
       "Bash(git commit -m 'Audit fixes: Critical bugs and memory leaks *)",
-      "Bash(git commit -m 'Clean up: Remove duplicated gradient styles *)"
+      "Bash(git commit -m 'Clean up: Remove duplicated gradient styles *)",
+      "Bash(git commit -m 'Humanize Spanish translations: More natural, conversational tone *)"
     ]
   }
 }

@@ -72,7 +72,18 @@ export const translations = {
     contact: {
       headline: 'Get your free roof estimate',
       subtitle: 'No obligation, no pressure',
-      cta: 'Schedule free inspection'
+      cta: 'Schedule free inspection',
+      title: 'Contact Us',
+      form: {
+        name: 'Name',
+        phone: 'Phone',
+        email: 'Email',
+        address: 'Address',
+        message: 'Message',
+        send: 'Send via WhatsApp',
+        error: 'Please fill in all required fields',
+        info: 'We\'ll respond within 24 hours'
+      }
     },
     footer: {
       company: 'Company',
@@ -159,7 +170,18 @@ export const translations = {
     contact: {
       headline: 'Obtén tu presupuesto gratis',
       subtitle: 'Sin compromiso, sin presión',
-      cta: 'Programar inspección gratuita'
+      cta: 'Programar inspección gratuita',
+      title: 'Contáctanos',
+      form: {
+        name: 'Tu nombre',
+        phone: 'Número de teléfono',
+        email: 'Correo electrónico',
+        address: 'Dirección',
+        message: 'Mensaje',
+        send: 'Enviar por WhatsApp',
+        error: 'Por favor completa todos los campos requeridos',
+        info: 'Te responderemos dentro de 24 horas'
+      }
     },
     footer: {
       company: 'Acerca de nosotros',

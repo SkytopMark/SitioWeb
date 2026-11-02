@@ -45,7 +45,11 @@
         </div>
 
         <!-- CTA Button -->
-        <button class="text-white px-3 md:px-5 py-2 md:py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-xs md:text-sm" style="background-color: #C86432;">
+        <button
+          @click="() => (window as any).openContactModal?.()"
+          class="text-white px-3 md:px-5 py-2 md:py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-xs md:text-sm"
+          style="background-color: #C86432;"
+        >
           {{ t('header.cta') }}
         </button>
       </div>

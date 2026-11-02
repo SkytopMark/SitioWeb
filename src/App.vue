@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <Header ref="headerRef" />
     <div class="md:pt-[60px]" style="padding-top: 40px; background-color: #405A7A;">
-      <Hero />
+      <Hero ref="heroRef" />
     </div>
     <div style="background-color: #F5F5F5;">
       <TrustBar />
@@ -11,14 +11,15 @@
       <Portfolio />
       <Testimonials />
       <Areas />
-      <Contact />
+      <Contact ref="contactRef" />
     </div>
-    <Footer />
+    <Footer ref="footerRef" />
+    <ContactModal ref="contactModal" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useScrollAnimation } from './composables/useScrollAnimation'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
@@ -30,6 +31,16 @@ import Testimonials from './components/Testimonials.vue'
 import Areas from './components/Areas.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+import ContactModal from './components/ContactModal.vue'
+
+const contactModal = ref<InstanceType<typeof ContactModal>>()
+
+// Expose openContactModal globally for button clicks
+onMounted(() => {
+  ;(window as any).openContactModal = () => {
+    contactModal.value?.openModal()
+  }
+})
 
 useScrollAnimation(0.15)
 
