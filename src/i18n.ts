@@ -11,7 +11,7 @@ export const translations = {
       label: 'Roofing Excellence',
       headline: 'Big or Small we roof them all',
       subtitle: 'From inspection to installation, professional roofing for every home in Southwest Florida.',
-      cta: 'Get Your Free Roof Assessment'
+      cta: 'Free Assessment'
     },
     trustBar: {
       experience: 'Years in business',
@@ -98,7 +98,7 @@ export const translations = {
       label: 'Excelencia en Techos',
       headline: 'Pequeño o grande, techos para todos',
       subtitle: 'Desde inspección hasta instalación, techos profesionales para cada hogar en Southwest Florida.',
-      cta: 'Obtén Tu Evaluación de Techo Gratis'
+      cta: 'Evaluación Gratis'
     },
     trustBar: {
       experience: 'Años en el negocio',
