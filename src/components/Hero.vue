@@ -4,15 +4,15 @@
       <source src="/images/hero/hero.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><defs><pattern id=%22p%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><rect fill=%22none%22 stroke=%22rgba(255,255,255,0.1)%22 stroke-width=%221%22 width=%22100%22 height=%22100%22/></pattern></defs><rect width=%221200%22 height=%22600%22 fill=%22url(%23p)%22/></svg>')"></div>
-    <div class="max-w-6xl mx-auto py-20 relative z-10 grid md:grid-cols-2 gap-12 items-center" style="padding-left: 40px; padding-right: 40px;">
-      <div data-animate="fade-in-up" class="order-1 md:order-2 opacity-0 text-white p-8 rounded-lg" style="background-color: rgba(0, 0, 0, 0.4);">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" style="font-family: 'Saira';">
+    <div class="max-w-6xl mx-auto py-8 md:py-20 relative z-10 grid md:grid-cols-2 gap-6 md:gap-12 items-center px-4 md:px-[40px]">
+      <div data-animate="fade-in-up" class="order-1 md:order-2 opacity-0 text-white p-4 md:p-8 rounded-lg" style="background-color: rgba(0, 0, 0, 0.4);">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight" style="font-family: 'Saira';">
           {{ t('hero.headline') }}
         </h1>
-        <p class="text-lg mb-8 max-w-xl" style="color: #E8DDD2; line-height: 1.6;">
+        <p class="text-base md:text-lg mb-6 md:mb-8 max-w-xl" style="color: #E8DDD2; line-height: 1.6;">
           {{ t('hero.subtitle') }}
         </p>
-        <a href="#contact" class="inline-block text-white px-8 py-3 rounded font-semibold transition hover:opacity-90" style="background-color: #C86432;">
+        <a href="#contact" class="inline-flex items-center text-white px-6 md:px-8 py-3 rounded font-semibold transition hover:opacity-90 min-h-[44px]" style="background-color: #C86432;">
           {{ t('hero.cta') }}
         </a>
       </div>

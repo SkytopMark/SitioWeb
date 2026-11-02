@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div style="padding-top: 60px; background-color: #405A7A;">
+    <div class="md:pt-[60px]" style="padding-top: 40px; background-color: #405A7A;">
       <Hero />
     </div>
     <div style="background-color: #F5F5F5;">

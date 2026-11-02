@@ -1,40 +1,40 @@
 <template>
-  <section style="background-color: #FFFFFF;" class="py-20">
-    <div class="max-w-6xl mx-auto" style="padding-left: 40px; padding-right: 40px;">
-      <h2 class="text-4xl font-bold mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
+  <section style="background-color: #FFFFFF;" class="py-8 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-[40px]">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
         {{ t('areas.headline') }}
       </h2>
-      <p class="text-center mb-2 max-w-2xl mx-auto" style="color: #666666;">
+      <p class="text-sm md:text-base text-center mb-2 max-w-2xl mx-auto" style="color: #666666;">
         {{ t('areas.subtitle') }}
       </p>
-      <p class="text-center mb-12 max-w-2xl mx-auto text-sm" style="color: #999999;">
+      <p class="text-xs md:text-sm text-center mb-8 md:mb-12 max-w-2xl mx-auto" style="color: #999999;">
         {{ t('areas.disclaimer') }}
       </p>
 
-      <div class="grid md:grid-cols-3 gap-8" style="position: relative; z-index: 1;">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8" style="position: relative; z-index: 1;">
         <div class="md:col-span-2">
-          <div id="map" style="height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
+          <div id="map" style="height: 300px; md:height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
         </div>
 
-        <div class="space-y-4" ref="cardsContainer">
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
-            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Cape Coral</h3>
-            <p class="text-sm" style="color: #2B2B2B;">{{ t('areas.capeCoralDesc') }}</p>
+        <div class="space-y-3 md:space-y-4" ref="cardsContainer">
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Cape Coral</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.capeCoralDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
-            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Fort Myers</h3>
-            <p class="text-sm" style="color: #2B2B2B;">{{ t('areas.fortMyersDesc') }}</p>
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Fort Myers</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.fortMyersDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
-            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Naples</h3>
-            <p class="text-sm" style="color: #2B2B2B;">{{ t('areas.naplesDesc') }}</p>
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Naples</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.naplesDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
-            <h3 class="font-bold text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Sarasota</h3>
-            <p class="text-sm" style="color: #2B2B2B;">{{ t('areas.sarasotaDesc') }}</p>
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Sarasota</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.sarasotaDesc') }}</p>
           </div>
         </div>
       </div>
