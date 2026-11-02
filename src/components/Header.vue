@@ -1,10 +1,10 @@
 <template>
   <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white border-opacity-10">
-    <nav class="max-w-6xl mx-auto py-0 md:py-2 flex items-center justify-between gap-1 md:gap-6 px-3 md:px-[40px]">
+    <nav class="max-w-6xl mx-auto py-0 md:py-3 flex items-center justify-between gap-1 md:gap-6 px-3 md:px-[40px]">
       <!-- Logo Responsivo -->
-      <div class="flex items-center flex-shrink-0 h-[70px] md:h-24">
+      <div class="flex items-center flex-shrink-0">
         <!-- Mobile: Icono Vertical -->
-        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-16 w-auto">
+        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
         <!-- Desktop: Logo Horizontal -->
         <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-20 w-auto">
       </div>
