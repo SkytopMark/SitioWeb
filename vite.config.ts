@@ -7,9 +7,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       onwarn(warning, warn) {
-        // Ignore unresolved import warnings for static assets
-        if (warning.code === 'UNRESOLVED_IMPORT' && warning.source?.includes('/images/logos/')) {
-          return
+        // Only suppress expected static asset warnings from public folder
+        if (
+          warning.code === 'UNRESOLVED_IMPORT' &&
+          warning.source?.includes('Header.vue') &&
+          (warning.message?.includes('images/logos/isotipo-blanco.png') ||
+           warning.message?.includes('images/logos/icono-horizontal-blanco.png'))
+        ) {
+          return // Expected: these are public folder assets
         }
         warn(warning)
       }

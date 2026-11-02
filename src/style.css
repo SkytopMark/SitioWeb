@@ -6,6 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Map responsive height */
+#map {
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #map {
+    height: 560px;
+  }
+}
+
 /* Animation keyframes */
 @keyframes fadeInUp {
   from {

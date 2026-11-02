@@ -1,15 +1,14 @@
-import { onMounted, ref } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 
 export function useScrollAnimation(threshold = 0.1) {
-  const elementsToAnimate = ref<HTMLElement[]>([])
   let lastScrollY = 0
+  let observer: IntersectionObserver | null = null
 
   onMounted(() => {
     // Wait for initial paint to complete
     setTimeout(() => {
       // Find all elements with data-animate attribute
       const elements = document.querySelectorAll('[data-animate]')
-      elementsToAnimate.value = Array.from(elements)
 
       // Track scroll direction
       const detectScrollDirection = () => {
@@ -17,7 +16,9 @@ export function useScrollAnimation(threshold = 0.1) {
         return currentScrollY > lastScrollY ? 'down' : 'up'
       }
 
-      const observer = new IntersectionObserver((entries) => {
+      observer = new IntersectionObserver((entries) => {
+        // Update scroll position before checking direction
+        lastScrollY = window.scrollY
         const scrollDirection = detectScrollDirection()
 
         entries.forEach((entry) => {
@@ -44,17 +45,34 @@ export function useScrollAnimation(threshold = 0.1) {
         })
       }, { threshold })
 
-      elementsToAnimate.value.forEach((el) => {
-        observer.observe(el)
+      elements.forEach((el) => {
+        observer?.observe(el)
       })
 
-      // Update last scroll position
-      window.addEventListener('scroll', () => {
+      // Update last scroll position on scroll event
+      const handleScroll = () => {
         lastScrollY = window.scrollY
-      }, { passive: true })
+      }
+      window.addEventListener('scroll', handleScroll, { passive: true })
+
+      // Cleanup function - store for onBeforeUnmount
+      ;(window as any)._scrollAnimationCleanup = () => {
+        window.removeEventListener('scroll', handleScroll)
+        if (observer) {
+          observer.disconnect()
+        }
+      }
     }, 350) // Wait for page to fully load before observing
   })
 
-  return { elementsToAnimate }
+  onBeforeUnmount(() => {
+    // Clean up scroll listener and observer
+    if ((window as any)._scrollAnimationCleanup) {
+      ;(window as any)._scrollAnimationCleanup()
+      delete (window as any)._scrollAnimationCleanup
+    }
+  })
+
+  return {}
 }
 

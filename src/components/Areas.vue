@@ -13,7 +13,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8" style="position: relative; z-index: 1;">
         <div class="md:col-span-2">
-          <div id="map" style="height: 300px; md:height: 560px; border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
+          <div id="map" style="border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
         </div>
 
         <div class="space-y-3 md:space-y-4" ref="cardsContainer">
@@ -43,13 +43,21 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from '../i18n'
 
 const { t } = useI18n()
 
+let map: any = null
+
 onMounted(() => {
-  const map = (window as any).L.map('map').setView([26.5, -81.8], 9)
+  // Guard: Check if Leaflet is loaded
+  if (!(window as any).L) {
+    console.error('Leaflet not loaded')
+    return
+  }
+
+  map = (window as any).L.map('map').setView([26.5, -81.8], 9)
 
   ;(window as any).L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
@@ -85,5 +93,12 @@ onMounted(() => {
       fillOpacity: 1
     }).bindPopup(`<div style="font-family: 'Saira'; font-weight: bold; color: #405A7A;">${location.name}</div>`).addTo(map)
   })
+})
+
+// Cleanup map on unmount to prevent memory leaks
+onBeforeUnmount(() => {
+  if (map) {
+    map.remove()
+  }
 })
 </script>
