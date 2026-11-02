@@ -7,7 +7,7 @@
           <p class="text-xs md:text-sm font-medium text-gray-700" style="letter-spacing: 0.5px;">{{ t('trustBar.experience') }}</p>
         </div>
         <div data-animate="fade-in-up" class="text-center opacity-0">
-          <div class="text-3xl md:text-5xl font-bold mb-1 md:mb-2" style="color: #405A7A; font-family: 'Saira';">2,500+</div>
+          <div class="text-5xl md:text-6xl mb-1 md:mb-2">✓</div>
           <p class="text-xs md:text-sm font-medium text-gray-700" style="letter-spacing: 0.5px;">{{ t('trustBar.completed') }}</p>
         </div>
         <div data-animate="fade-in-up" class="text-center opacity-0">

@@ -15,7 +15,7 @@ export const translations = {
     },
     trustBar: {
       experience: 'Years in business',
-      completed: 'Roofs installed',
+      completed: 'Certified Contractor',
       satisfaction: 'Satisfaction rate',
       emergency: 'Emergency response'
     },
@@ -113,7 +113,7 @@ export const translations = {
     },
     trustBar: {
       experience: 'Años de experiencia',
-      completed: 'Techos instalados',
+      completed: 'Contratista Certificado Florida',
       satisfaction: 'Satisfacción garantizada',
       emergency: 'Disponibles 24/7'
     },
