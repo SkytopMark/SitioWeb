@@ -1,12 +1,12 @@
 <template>
   <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white border-opacity-10">
-    <nav class="max-w-6xl mx-auto py-2 md:py-4 flex items-center justify-between gap-2 md:gap-8 px-4 md:px-[40px]">
+    <nav class="max-w-6xl mx-auto py-1 md:py-3 flex items-center justify-between gap-2 md:gap-8 px-4 md:px-[40px]">
       <!-- Logo Responsivo -->
-      <div class="flex items-center flex-shrink-0 h-12 md:h-14">
+      <div class="flex items-center flex-shrink-0 h-16 md:h-20">
         <!-- Mobile: Icono Vertical -->
-        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-10 w-auto">
+        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
         <!-- Desktop: Logo Horizontal -->
-        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-12 w-auto">
+        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-16 w-auto">
       </div>
 
       <!-- Nav Desktop -->
@@ -18,26 +18,26 @@
       </nav>
 
       <!-- Language & CTA -->
-      <div class="flex items-center gap-1 md:gap-4 flex-shrink-0">
+      <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
         <!-- Language Dropdown -->
         <div class="relative">
           <button
             @click="showLanguageMenu = !showLanguageMenu"
-            class="flex items-center justify-center w-10 h-10 md:h-12 rounded transition hover:opacity-70 min-h-[44px]"
+            class="flex items-center justify-center w-12 h-12 md:h-16 rounded transition hover:opacity-70 min-h-[44px]"
             title="Select language"
           >
-            <span class="text-xl">🌐</span>
+            <span class="text-2xl md:text-3xl">🌐</span>
           </button>
-          <div v-show="showLanguageMenu" class="absolute right-0 mt-1 bg-gray-900 rounded-lg shadow-lg overflow-hidden z-10 min-w-[100px]">
+          <div v-show="showLanguageMenu" class="absolute right-0 mt-1 bg-gray-900 rounded-lg shadow-lg overflow-hidden z-10 min-w-[120px]">
             <button
               @click="handleLanguageSelect('en')"
-              :class="['w-full px-3 py-2 text-left text-sm font-semibold transition', language === 'en' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
+              :class="['w-full px-4 py-3 text-left text-sm font-semibold transition', language === 'en' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
             >
               English
             </button>
             <button
               @click="handleLanguageSelect('es')"
-              :class="['w-full px-3 py-2 text-left text-sm font-semibold transition', language === 'es' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
+              :class="['w-full px-4 py-3 text-left text-sm font-semibold transition', language === 'es' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
             >
               Español
             </button>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- CTA Button -->
-        <button class="text-white px-3 md:px-6 py-2 md:py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-sm md:text-base" style="background-color: #C86432;">
+        <button class="text-white px-4 md:px-8 py-3 md:py-4 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-sm md:text-base" style="background-color: #C86432;">
           {{ t('header.cta') }}
         </button>
       </div>
