@@ -17,22 +17,22 @@
         </div>
 
         <div class="space-y-3 md:space-y-4" ref="cardsContainer">
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+          <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Cape Coral</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.capeCoralDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+          <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Fort Myers</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.fortMyersDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+          <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Naples</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.naplesDesc') }}</p>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-4 md:p-6 rounded-lg" style="background: linear-gradient(135deg, #F4EDE4 0%, #E8DDD2 100%);">
+          <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Sarasota</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.sarasotaDesc') }}</p>
           </div>
