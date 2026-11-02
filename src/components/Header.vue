@@ -6,7 +6,7 @@
         <!-- Mobile: Icono Vertical -->
         <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
         <!-- Desktop: Logo Horizontal -->
-        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block w-auto md:max-w-[120px]">
+        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block w-32 h-auto">
       </div>
 
       <!-- Nav Desktop -->
