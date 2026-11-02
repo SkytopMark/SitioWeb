@@ -32,7 +32,11 @@
       "Bash(cp src/assets/icons/*.png public/images/icons/)",
       "Bash(grep -r \"from ['\\\\\"]./app/\" --include=\"*.vue\" --include=\"*.ts\" --include=\"*.js\" ! -path \"*/node_modules/*\")",
       "Bash(grep -r \"i18n.config\" --include=\"*.ts\" --include=\"*.js\" ! -path \"*/node_modules/*\")",
-      "PowerShell(cd \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\"; \\(Get-Content tailwind.config.ts\\), \\(Get-Content tailwind.config.js\\) | Select-String -Pattern \"content|src|app|pages\" | Select-Object -First 10)"
+      "PowerShell(cd \"D:\\\\Work\\\\dANI\\\\Skytop Roofing\\\\SitioWeb\"; \\(Get-Content tailwind.config.ts\\), \\(Get-Content tailwind.config.js\\) | Select-String -Pattern \"content|src|app|pages\" | Select-Object -First 10)",
+      "Bash(grep -E \"^\\\\./[^/]+$|\\\\.vue$|\\\\.ts$|\\\\.js$\")",
+      "Bash(git restore *)",
+      "Bash(git commit -m 'Fix: Logo desktop sizing with Tailwind CDN-compatible classes *)",
+      "Bash(git commit -m 'Logo mobile: Use isotipo-blanco.png for better visibility *)"
     ]
   }
 }
