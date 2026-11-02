@@ -92,85 +92,85 @@ export const translations = {
       services: 'Servicios',
       areas: 'Áreas',
       contact: 'Contacto',
-      cta: 'Contactenos'
+      cta: 'Contáctanos'
     },
     hero: {
       label: 'Excelencia en Techos',
       headline: 'Pequeño o grande, techos para todos',
-      subtitle: 'Desde inspección hasta instalación, techos profesionales para cada hogar en Southwest Florida.',
-      cta: 'Evaluación Gratis'
+      subtitle: 'De la inspección a la instalación, techos profesionales para tu hogar en Southwest Florida.',
+      cta: 'Evaluación Gratuita'
     },
     trustBar: {
-      experience: 'Años en el negocio',
+      experience: 'Años de experiencia',
       completed: 'Techos instalados',
-      satisfaction: 'Tasa de satisfacción',
-      emergency: 'Respuesta de emergencia'
+      satisfaction: 'Satisfacción garantizada',
+      emergency: 'Disponibles 24/7'
     },
     services: {
-      headline: 'Cuatro tipos de techo comprobados',
-      subtitle: 'Elige la solución que se adapte a las necesidades y clima de tu hogar en Southwest Florida.',
+      headline: 'Soluciones de techos probadas',
+      subtitle: 'Encuentra la solución perfecta para tu hogar según sus necesidades y el clima de Southwest Florida.',
       metal: {
         name: 'Techos de metal',
-        desc: 'Diseñado para el aire salado de Florida y las temporadas de huracanes. Eficiente en energía y diseñado para durar 40+ años.'
+        desc: 'Diseñados para resistir el aire salado y huracanes de Florida. Eficientes en energía y duraderos 40+ años.'
       },
       shingle: {
-        name: 'Techos de tejas',
-        desc: 'Tejas arquitectónicas premium que resisten el clima de Florida. Calificación A al fuego y resistencia al viento hasta 130+ mph.'
+        name: 'Techos de tejas de asfalto',
+        desc: 'Tejas arquitectónicas premium que aguantan el clima de Florida. Clasificación A contra incendios y resistencia de 130+ mph.'
       },
       tile: {
-        name: 'Techos de baldosas',
-        desc: 'Baldosas de barro o concreto clásicas con elegancia clásica. Naturalmente frescos y diseñados para casas costeras.'
+        name: 'Techos de tejas de barro',
+        desc: 'Elegancia clásica en barro o concreto. Mantienen la casa fresca naturalmente y son ideales para casas en la costa.'
       },
       flat: {
-        name: 'Techos planos',
-        desc: 'Sistemas modernos de TPO y EPDM para casas comerciales y contemporáneas. Espacio máximo utilizable.'
+        name: 'Techos planos modernos',
+        desc: 'Sistemas TPO y EPDM para edificios comerciales y contemporáneos. Aprovecha el máximo espacio disponible.'
       },
-      learnMore: 'Aprende más →'
+      learnMore: 'Saber más →'
     },
     process: {
-      headline: 'Nuestro proceso de techos',
+      headline: 'Cómo trabajamos',
       subtitle: 'De la inspección gratuita al techo terminado: transparencia y calidad en cada paso.',
-      inspect: 'Inspeccionar',
-      inspectDesc: 'Evaluación gratuita de la condición, edad y necesidades de su techo.',
-      plan: 'Planificar',
-      planDesc: 'Estimado transparente con desglose detallado. Sin sorpresas, sin presión.',
-      install: 'Instalar',
-      installDesc: 'Instalación experta con verificaciones de calidad regulares y limpieza diaria.',
-      protect: 'Proteger',
-      protectDesc: 'Cobertura de garantía y soporte gratuito continuo de mantenimiento e inspección.'
+      inspect: 'Inspección',
+      inspectDesc: 'Revisamos gratis el estado de tu techo, su antigüedad y lo que necesita.',
+      plan: 'Presupuesto',
+      planDesc: 'Te damos un presupuesto claro y detallado. Sin sorpresas, sin presión.',
+      install: 'Instalación',
+      installDesc: 'Instalación profesional con inspecciones regulares y limpieza diaria del sitio.',
+      protect: 'Garantía',
+      protectDesc: 'Cobertura de garantía y mantenimiento continuo para que tu techo dure años.'
     },
     portfolio: {
-      headline: 'Proyectos Recientes',
-      subtitle: 'Explore nuestro portafolio de instalaciones y reparaciones de techos recientes en Southwest Florida.'
+      headline: 'Trabajos Recientes',
+      subtitle: 'Mira nuestros proyectos de instalación y reparación de techos recientes en Southwest Florida.'
     },
     testimonials: {
-      headline: 'Confiado por Propietarios',
-      subtitle: 'Vea lo que nuestros clientes satisfechos tienen que decir sobre su experiencia con Skytop Roofing.'
+      headline: 'De Confianza para Propietarios',
+      subtitle: 'Lee las historias de nuestros clientes satisfechos y su experiencia con Skytop Roofing.'
     },
     areas: {
-      headline: 'Áreas de servicio en Southwest Florida',
-      subtitle: 'Servimos a propietarios de viviendas y negocios en toda la región con experiencia local y servicio responsivo.',
-      disclaimer: 'No limitado a estas áreas — estamos felices de discutir expandir nuestro rango de servicio para satisfacer sus necesidades.',
-      capeCoralDesc: 'Sirviendo al creciente mercado residencial de Cape Coral con instalaciones expertas.',
-      fortMyersDesc: 'Nuestra sede y centro de servicio principal para South Lee County.',
-      naplesDesc: 'Soluciones de techos premium para el mercado residencial de lujo de Naples.',
-      sarasotaDesc: 'Sirviendo a las comunidades costeras del condado de Sarasota con servicio responsivo.'
+      headline: 'Servimos a Southwest Florida',
+      subtitle: 'Trabajamos con propietarios y negocios de toda la región con experiencia local y servicio profesional.',
+      disclaimer: 'Nos extendemos fuera de estas áreas. Contáctanos para hablar sobre tu ubicación específica.',
+      capeCoralDesc: 'Servimos el mercado residencial de Cape Coral con instalaciones de calidad.',
+      fortMyersDesc: 'Nuestra oficina principal y centro de servicio para South Lee County.',
+      naplesDesc: 'Soluciones premium de techos para las viviendas de lujo de Naples.',
+      sarasotaDesc: 'Servimos las comunidades costeras del condado de Sarasota con profesionalismo.'
     },
     contact: {
-      headline: 'Obtenga su estimado de techo gratis',
-      subtitle: 'Sin obligación, sin presión',
-      cta: 'Agendar inspección gratuita'
+      headline: 'Obtén tu presupuesto gratis',
+      subtitle: 'Sin compromiso, sin presión',
+      cta: 'Programar inspección gratuita'
     },
     footer: {
-      company: 'Empresa',
-      companyDesc: 'Skytop Roofing ha estado protegiendo hogares de Southwest Florida durante más de 15 años con artesanía y confiabilidad incomparables.',
+      company: 'Acerca de nosotros',
+      companyDesc: 'Más de 15 años protegiendo hogares en Southwest Florida con artesanía profesional y garantía de confianza.',
       contactLabel: 'Contacto',
       servicesLabel: 'Servicios',
       metal: 'Techos de Metal',
-      shingle: 'Techos de Tejas',
-      tile: 'Techos de Baldosas',
+      shingle: 'Techos de Asfalto',
+      tile: 'Techos de Tejas',
       flat: 'Techos Planos',
-      copyright: '© 2026 Skytop Roofing. Todos los derechos reservados. Construido con artesanía premium.'
+      copyright: '© 2026 Skytop Roofing. Todos los derechos reservados. Hecho con profesionalismo y dedicación.'
     }
   }
 }
