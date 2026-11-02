@@ -1,124 +1,120 @@
 <template>
-  <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center p-4">
-    <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
-      <!-- Header -->
-      <div class="sticky top-0 bg-gradient-to-r p-6 flex items-center justify-between" style="background: linear-gradient(135deg, #405A7A 0%, #2B4B6D 100%);">
-        <h2 class="text-xl font-bold text-white" style="font-family: 'Saira';">{{ t('contact.title') }}</h2>
-        <button @click="closeModal" class="text-white hover:opacity-70 text-2xl">×</button>
+  <!-- Modal Overlay -->
+  <Teleport to="body">
+    <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center p-4" @click="closeModal">
+      <!-- Modal Dialog -->
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full" @click.stop>
+        <!-- Header -->
+        <div class="p-6 flex items-center justify-between" style="background: linear-gradient(135deg, #405A7A 0%, #2B4B6D 100%);">
+          <h2 class="text-xl font-bold text-white">Contáctanos</h2>
+          <button @click="closeModal" class="text-white hover:opacity-70 text-2xl font-bold">
+            ×
+          </button>
+        </div>
+
+        <!-- Form -->
+        <form @submit.prevent="handleSubmit" class="p-6 space-y-4">
+          <!-- Name -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
+              Nombre *
+            </label>
+            <input
+              v-model="name"
+              type="text"
+              required
+              placeholder="Tu nombre completo"
+              class="w-full px-4 py-2 border rounded-lg text-sm"
+              style="border-color: #E5E5E5; color: #2B2B2B;"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
+              Teléfono *
+            </label>
+            <input
+              v-model="phone"
+              type="tel"
+              required
+              placeholder="(239) 365-9939"
+              class="w-full px-4 py-2 border rounded-lg text-sm"
+              style="border-color: #E5E5E5; color: #2B2B2B;"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
+              Correo *
+            </label>
+            <input
+              v-model="email"
+              type="email"
+              required
+              placeholder="tu@correo.com"
+              class="w-full px-4 py-2 border rounded-lg text-sm"
+              style="border-color: #E5E5E5; color: #2B2B2B;"
+            />
+          </div>
+
+          <!-- Address -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
+              Dirección (opcional)
+            </label>
+            <input
+              v-model="address"
+              type="text"
+              placeholder="Tu dirección"
+              class="w-full px-4 py-2 border rounded-lg text-sm"
+              style="border-color: #E5E5E5; color: #2B2B2B;"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
+              Mensaje
+            </label>
+            <textarea
+              v-model="message"
+              placeholder="¿Cómo podemos ayudarte?"
+              rows="3"
+              class="w-full px-4 py-2 border rounded-lg text-sm resize-none"
+              style="border-color: #E5E5E5; color: #2B2B2B;"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="w-full text-white font-semibold py-3 rounded-lg transition hover:opacity-90"
+            style="background-color: #C86432;"
+          >
+            Enviar por WhatsApp
+          </button>
+
+          <!-- Info -->
+          <p class="text-xs text-center" style="color: #999999;">
+            Te responderemos dentro de 24 horas
+          </p>
+        </form>
       </div>
-
-      <!-- Form -->
-      <form @submit.prevent="submitForm" class="p-6 space-y-4">
-        <!-- Name -->
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
-            {{ t('contact.form.name') }} *
-          </label>
-          <input
-            v-model="form.name"
-            type="text"
-            required
-            placeholder="Tu nombre"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-            style="border-color: #E5E5E5; color: #2B2B2B;"
-            :style="{ '--tw-ring-color': '#C86432' }"
-          />
-        </div>
-
-        <!-- Phone -->
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
-            {{ t('contact.form.phone') }} *
-          </label>
-          <input
-            v-model="form.phone"
-            type="tel"
-            required
-            placeholder="(123) 456-7890"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-            style="border-color: #E5E5E5; color: #2B2B2B;"
-            :style="{ '--tw-ring-color': '#C86432' }"
-          />
-        </div>
-
-        <!-- Email -->
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
-            {{ t('contact.form.email') }} *
-          </label>
-          <input
-            v-model="form.email"
-            type="email"
-            required
-            placeholder="tu@correo.com"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-            style="border-color: #E5E5E5; color: #2B2B2B;"
-            :style="{ '--tw-ring-color': '#C86432' }"
-          />
-        </div>
-
-        <!-- Address (Optional) -->
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
-            {{ t('contact.form.address') }}
-          </label>
-          <input
-            v-model="form.address"
-            type="text"
-            placeholder="Dirección (opcional)"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2"
-            style="border-color: #E5E5E5; color: #2B2B2B;"
-            :style="{ '--tw-ring-color': '#C86432' }"
-          />
-        </div>
-
-        <!-- Message -->
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">
-            {{ t('contact.form.message') }}
-          </label>
-          <textarea
-            v-model="form.message"
-            placeholder="¿Cómo podemos ayudarte?"
-            rows="3"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 resize-none"
-            style="border-color: #E5E5E5; color: #2B2B2B;"
-            :style="{ '--tw-ring-color': '#C86432' }"
-          ></textarea>
-        </div>
-
-        <!-- Submit Button -->
-        <button
-          type="submit"
-          class="w-full text-white font-semibold py-3 rounded-lg transition hover:opacity-90 flex items-center justify-center gap-2"
-          style="background-color: #C86432;"
-        >
-          <span>📱 {{ t('contact.form.send') }}</span>
-        </button>
-
-        <!-- Info Text -->
-        <p class="text-xs text-center" style="color: #999999;">
-          {{ t('contact.form.info') }}
-        </p>
-      </form>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
-import { useI18n } from '../i18n'
-
-const { t } = useI18n()
+import { ref } from 'vue'
 
 const isOpen = ref(false)
-const form = reactive({
-  name: '',
-  phone: '',
-  email: '',
-  address: '',
-  message: ''
-})
+const name = ref('')
+const phone = ref('')
+const email = ref('')
+const address = ref('')
+const message = ref('')
 
 const openModal = () => {
   isOpen.value = true
@@ -126,51 +122,40 @@ const openModal = () => {
 
 const closeModal = () => {
   isOpen.value = false
+  resetForm()
 }
 
-const submitForm = () => {
-  // Validate required fields
-  if (!form.name || !form.phone || !form.email) {
-    alert(t('contact.form.error'))
+const resetForm = () => {
+  name.value = ''
+  phone.value = ''
+  email.value = ''
+  address.value = ''
+  message.value = ''
+}
+
+const handleSubmit = () => {
+  if (!name.value || !phone.value || !email.value) {
+    alert('Por favor completa todos los campos requeridos')
     return
   }
 
   // Build WhatsApp message
-  const message = `
-*Nuevo contacto de Skytop Roofing:*
+  const msg = `Hola, me gustaría contactar a Skytop Roofing:
 
-*Nombre:* ${form.name}
-*Teléfono:* ${form.phone}
-*Correo:* ${form.email}
-${form.address ? `*Dirección:* ${form.address}` : ''}
-${form.message ? `*Mensaje:* ${form.message}` : ''}
-  `.trim()
-
-  // Send to WhatsApp
-  const whatsappNumber = '12393659939'
-  const encodedMessage = encodeURIComponent(message)
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+Nombre: ${name.value}
+Teléfono: ${phone.value}
+Correo: ${email.value}
+${address.value ? `Dirección: ${address.value}` : ''}
+${message.value ? `\nMensaje: ${message.value}` : ''}`
 
   // Open WhatsApp
+  const encoded = encodeURIComponent(msg)
+  const whatsappUrl = `https://wa.me/12393659939?text=${encoded}`
   window.open(whatsappUrl, '_blank')
 
-  // Reset form and close modal
-  form.name = ''
-  form.phone = ''
-  form.email = ''
-  form.address = ''
-  form.message = ''
   closeModal()
 }
 
-// Export to be used by other components
+// Export methods
 defineExpose({ openModal, closeModal })
 </script>
-
-<style scoped>
-input:focus,
-textarea:focus {
-  border-color: #C86432 !important;
-  box-shadow: 0 0 0 3px rgba(200, 100, 50, 0.1) !important;
-}
-</style>
