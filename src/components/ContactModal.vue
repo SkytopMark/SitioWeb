@@ -1,7 +1,7 @@
 <template>
   <!-- Modal Overlay -->
   <Teleport to="body">
-    <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center p-4" @click="closeModal">
+    <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" @click="closeModal">
       <!-- Modal Dialog -->
       <div class="bg-white rounded-lg shadow-xl max-w-md w-full" @click.stop>
         <!-- Header -->

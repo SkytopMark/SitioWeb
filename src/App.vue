@@ -33,18 +33,12 @@ import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import ContactModal from './components/ContactModal.vue'
 
-const contactModal = ref<InstanceType<typeof ContactModal>>()
+const contactModal = ref<any>()
 
-// Expose openContactModal globally for button clicks
 onMounted(() => {
-  ;(window as any).openContactModal = () => {
-    contactModal.value?.openModal()
-  }
+  ;(window as any).openContactModal = () => contactModal.value?.openModal()
+  window.scrollTo(0, 0)
 })
 
 useScrollAnimation(0.15)
-
-onMounted(() => {
-  window.scrollTo(0, 0)
-})
 </script>
