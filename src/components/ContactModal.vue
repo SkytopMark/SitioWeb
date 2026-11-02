@@ -115,7 +115,9 @@ const address = ref('')
 const message = ref('')
 
 const openModal = () => {
+  console.log('openModal called, setting isOpen to true')
   isOpen.value = true
+  console.log('isOpen is now:', isOpen.value)
 }
 
 const closeModal = () => {

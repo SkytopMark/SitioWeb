@@ -8,7 +8,7 @@
         {{ t('contact.subtitle') }}
       </p>
       <button
-        @click="() => (window as any).openContactModal?.()"
+        @click="() => typeof window !== 'undefined' && (window as any).openContactModal?.()"
         class="text-white px-8 md:px-12 py-3 rounded font-semibold transition hover:opacity-90 min-h-[44px] inline-flex items-center"
         style="background-color: #2B2B2B;"
       >

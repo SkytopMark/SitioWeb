@@ -36,7 +36,10 @@ import ContactModal from './components/ContactModal.vue'
 const contactModal = ref<any>()
 
 onMounted(() => {
-  ;(window as any).openContactModal = () => contactModal.value?.openModal()
+  ;(window as any).openContactModal = () => {
+    console.log('openContactModal called, contactModal.value:', contactModal.value)
+    contactModal.value?.openModal()
+  }
   window.scrollTo(0, 0)
 })
 
