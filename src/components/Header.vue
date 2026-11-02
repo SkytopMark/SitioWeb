@@ -1,10 +1,15 @@
 <template>
   <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white border-opacity-10">
-    <nav class="max-w-6xl mx-auto py-3 md:py-4 flex items-center justify-between gap-3 md:gap-8 px-4 md:px-[40px]">
-      <div class="flex items-center gap-2 flex-shrink-0">
-        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" style="height: 32px; md:height: 40px; width: auto;">
+    <nav class="max-w-6xl mx-auto py-2 md:py-4 flex items-center justify-between gap-2 md:gap-8 px-4 md:px-[40px]">
+      <!-- Logo Responsivo -->
+      <div class="flex items-center flex-shrink-0 h-12 md:h-14">
+        <!-- Mobile: Icono Vertical -->
+        <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="md:hidden h-10 w-auto">
+        <!-- Desktop: Logo Horizontal -->
+        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-12 w-auto">
       </div>
 
+      <!-- Nav Desktop -->
       <nav class="hidden md:flex gap-10 text-base flex-1 justify-center">
         <a href="#" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.home') }}</a>
         <a href="#services" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.services') }}</a>
@@ -12,22 +17,35 @@
         <a href="#contact" class="hover:text-orange-500 transition font-medium tracking-wide" style="color: #F4EDE4;">{{ t('header.contact') }}</a>
       </nav>
 
-      <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
-        <div class="flex items-center gap-1 md:gap-2">
+      <!-- Language & CTA -->
+      <div class="flex items-center gap-1 md:gap-4 flex-shrink-0">
+        <!-- Language Dropdown -->
+        <div class="relative">
           <button
-            @click="changeLanguage('en')"
-            :class="['px-2 md:px-3 py-2 rounded text-xs font-semibold transition min-h-[44px] flex items-center', language === 'en' ? 'bg-white text-blue-900' : 'text-white hover:opacity-70']"
+            @click="showLanguageMenu = !showLanguageMenu"
+            class="flex items-center justify-center w-10 h-10 md:h-12 rounded transition hover:opacity-70 min-h-[44px]"
+            title="Select language"
           >
-            EN
+            <span class="text-xl">🌐</span>
           </button>
-          <button
-            @click="changeLanguage('es')"
-            :class="['px-2 md:px-3 py-2 rounded text-xs font-semibold transition min-h-[44px] flex items-center', language === 'es' ? 'bg-white text-blue-900' : 'text-white hover:opacity-70']"
-          >
-            ES
-          </button>
+          <div v-show="showLanguageMenu" class="absolute right-0 mt-1 bg-gray-900 rounded-lg shadow-lg overflow-hidden z-10 min-w-[100px]">
+            <button
+              @click="handleLanguageSelect('en')"
+              :class="['w-full px-3 py-2 text-left text-sm font-semibold transition', language === 'en' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
+            >
+              English
+            </button>
+            <button
+              @click="handleLanguageSelect('es')"
+              :class="['w-full px-3 py-2 text-left text-sm font-semibold transition', language === 'es' ? 'bg-orange-600 text-white' : 'text-white hover:bg-gray-800']"
+            >
+              Español
+            </button>
+          </div>
         </div>
-        <button class="text-white px-4 md:px-6 py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center" style="background-color: #C86432;">
+
+        <!-- CTA Button -->
+        <button class="text-white px-3 md:px-6 py-2 md:py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-sm md:text-base" style="background-color: #C86432;">
           {{ t('header.cta') }}
         </button>
       </div>
@@ -41,10 +59,12 @@ import { useI18n } from '../i18n'
 
 const { t, getLanguage, setLanguage } = useI18n()
 const language = ref<'en' | 'es'>(getLanguage())
+const showLanguageMenu = ref(false)
 
-const changeLanguage = (lang: 'en' | 'es') => {
+const handleLanguageSelect = (lang: 'en' | 'es') => {
   language.value = lang
   setLanguage(lang)
+  showLanguageMenu.value = false
   window.location.reload()
 }
 </script>
