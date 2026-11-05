@@ -7,7 +7,11 @@
           <p class="text-xs md:text-sm font-medium text-gray-700" style="letter-spacing: 0.5px;">{{ t('trustBar.experience') }}</p>
         </div>
         <div data-animate="fade-in-up" class="text-center opacity-0">
-          <div class="text-5xl md:text-6xl mb-1 md:mb-2">🛡️</div>
+          <div class="mb-1 md:mb-2 flex justify-center">
+            <svg class="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="#405A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            </svg>
+          </div>
           <p class="text-xs md:text-sm font-medium text-gray-700" style="letter-spacing: 0.5px;">{{ t('trustBar.completed') }}</p>
         </div>
         <div data-animate="fade-in-up" class="text-center opacity-0">
