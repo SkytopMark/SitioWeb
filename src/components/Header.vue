@@ -4,9 +4,9 @@
       <!-- Logo Responsivo -->
       <div class="flex items-center flex-shrink-0">
         <!-- Mobile: Isotipo -->
-        <img src="/images/logos/isotipo-blanco.png" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
+        <img :src="isotipoLogo" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
         <!-- Desktop: Logo Horizontal (max 220px) -->
-        <img src="/images/logos/icono-horizontal-blanco.png" alt="Skytop Roofing" class="hidden md:block h-12 w-auto" style="max-width: 220px;">
+        <img :src="horizontalLogo" alt="Skytop Roofing" class="hidden md:block h-12 w-auto" style="max-width: 220px;">
       </div>
 
       <!-- Nav Desktop -->
@@ -60,6 +60,8 @@
 <script setup lang="ts">
 import { ref, inject } from 'vue'
 import { useI18n } from '../i18n'
+import isotipoLogo from '/images/logos/isotipo-blanco.png'
+import horizontalLogo from '/images/logos/icono-horizontal-blanco.png'
 
 const { t, getLanguage, setLanguage } = useI18n()
 const language = ref<'en' | 'es'>(getLanguage())
