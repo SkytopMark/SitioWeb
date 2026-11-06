@@ -24,19 +24,39 @@ export const translations = {
       subtitle: 'Choose the solution that matches your home\'s needs and climate in Southwest Florida.',
       metal: {
         name: 'Metal roofing',
-        desc: 'Engineered for Florida\'s salt air and hurricane seasons. Energy efficient and engineered to last 40+ years.'
+        desc: 'Engineered for Florida\'s salt air and hurricane seasons. Energy efficient and engineered to last 40+ years.',
+        types: [
+          { name: '5V Crimp', desc: 'Classic Florida look with five V-shaped ribs. Exposed fasteners, affordable and highly wind resistant.' },
+          { name: 'Standing Seam', desc: 'Concealed fasteners and raised seams for a clean, modern finish. Our most durable and low-maintenance metal option.' },
+          { name: 'Galvanized (Zinc)', desc: 'Zinc-coated steel panels that resist rust and corrosion. A cost-effective choice for homes and outbuildings.' }
+        ]
       },
       shingle: {
         name: 'Shingle roofing',
-        desc: 'Premium architectural shingles withstand Florida weather. Class A fire-rated and wind-resistant to 130+ mph.'
+        desc: 'Premium architectural shingles withstand Florida weather. Class A fire-rated and wind-resistant to 130+ mph.',
+        types: [
+          { name: '3-Tab', desc: 'Flat, uniform shingles. The most budget-friendly option for a clean, traditional look.' },
+          { name: 'Architectural', desc: 'Thicker, layered shingles with added depth and higher wind ratings. The most popular choice.' },
+          { name: 'Designer / Luxury', desc: 'Premium shingles that mimic slate or wood shake, with the longest warranties.' }
+        ]
       },
       tile: {
         name: 'Tile roofing',
-        desc: 'Classic clay or concrete tile with Old World elegance. Naturally cooling and designed for coastal homes.'
+        desc: 'Classic clay or concrete tile with Old World elegance. Naturally cooling and designed for coastal homes.',
+        types: [
+          { name: 'Clay', desc: 'Traditional barrel tile with rich color that never fades. Extremely long lifespan.' },
+          { name: 'Concrete', desc: 'Strong, heavy tile available in many profiles and colors, at a lower cost than clay.' },
+          { name: 'Flat Tile', desc: 'Smooth, low-profile tile for a sleek, contemporary appearance.' }
+        ]
       },
       flat: {
         name: 'Flat roofing',
-        desc: 'Modern TPO and EPDM systems for commercial and contemporary homes. Maximum usable space.'
+        desc: 'Modern TPO and EPDM systems for commercial and contemporary homes. Maximum usable space.',
+        types: [
+          { name: 'TPO', desc: 'White reflective membrane that keeps buildings cool and lowers energy bills.' },
+          { name: 'EPDM', desc: 'Flexible rubber membrane, proven for decades and resistant to UV and temperature changes.' },
+          { name: 'Modified Bitumen', desc: 'Multi-layer asphalt system with strong resistance to foot traffic and punctures.' }
+        ]
       },
       learnMore: 'Learn more →'
     },
@@ -124,19 +144,39 @@ export const translations = {
       subtitle: 'Encuentra la solución perfecta para tu hogar según sus necesidades y el clima de Southwest Florida.',
       metal: {
         name: 'Techos de metal',
-        desc: 'Diseñados para resistir el aire salado y huracanes de Florida. Eficientes en energía y duraderos 40+ años.'
+        desc: 'Diseñados para resistir el aire salado y huracanes de Florida. Eficientes en energía y duraderos 40+ años.',
+        types: [
+          { name: '5V Crimp', desc: 'El look clásico de Florida con cinco nervaduras en V. Tornillería expuesta, económico y muy resistente al viento.' },
+          { name: 'Standing Seam', desc: 'Tornillería oculta y juntas elevadas para un acabado limpio y moderno. Nuestra opción de metal más duradera.' },
+          { name: 'Galvanizado (Zinc)', desc: 'Paneles de acero con capa de zinc que resisten el óxido y la corrosión. Una opción económica para casas y anexos.' }
+        ]
       },
       shingle: {
         name: 'Techos de tejas de asfalto',
-        desc: 'Tejas arquitectónicas premium que aguantan el clima de Florida. Clasificación A contra incendios y resistencia de 130+ mph.'
+        desc: 'Tejas arquitectónicas premium que aguantan el clima de Florida. Clasificación A contra incendios y resistencia de 130+ mph.',
+        types: [
+          { name: '3-Tab', desc: 'Tejas planas y uniformes. La opción más económica con un look limpio y tradicional.' },
+          { name: 'Arquitectónicas', desc: 'Tejas más gruesas en capas, con más profundidad y mayor resistencia al viento. La más popular.' },
+          { name: 'Diseñador / Lujo', desc: 'Tejas premium que imitan pizarra o madera, con las garantías más largas.' }
+        ]
       },
       tile: {
         name: 'Techos de tejas de barro',
-        desc: 'Elegancia clásica en barro o concreto. Mantienen la casa fresca naturalmente y son ideales para casas en la costa.'
+        desc: 'Elegancia clásica en barro o concreto. Mantienen la casa fresca naturalmente y son ideales para casas en la costa.',
+        types: [
+          { name: 'Barro', desc: 'Teja tradicional tipo barril con color que nunca se decolora. Vida útil extremadamente larga.' },
+          { name: 'Concreto', desc: 'Teja fuerte disponible en muchos perfiles y colores, a menor costo que el barro.' },
+          { name: 'Teja Plana', desc: 'Teja lisa de bajo perfil para una apariencia elegante y contemporánea.' }
+        ]
       },
       flat: {
         name: 'Techos planos modernos',
-        desc: 'Sistemas TPO y EPDM para edificios comerciales y contemporáneos. Aprovecha el máximo espacio disponible.'
+        desc: 'Sistemas TPO y EPDM para edificios comerciales y contemporáneos. Aprovecha el máximo espacio disponible.',
+        types: [
+          { name: 'TPO', desc: 'Membrana blanca reflectiva que mantiene fresco el edificio y reduce la factura de luz.' },
+          { name: 'EPDM', desc: 'Membrana de caucho flexible, probada por décadas y resistente a los rayos UV y cambios de temperatura.' },
+          { name: 'Bitumen Modificado', desc: 'Sistema asfáltico multicapa muy resistente al tránsito y a las perforaciones.' }
+        ]
       },
       learnMore: 'Saber más →'
     },

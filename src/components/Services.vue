@@ -13,7 +13,7 @@
           <div class="p-4 md:p-8">
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.metal.name') }}</h3>
             <p style="color: #666666; font-size: 0.9375rem;">{{ t('services.metal.desc') }}</p>
-            <button class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+            <button @click="active = 'metal'" class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
           </div>
         </div>
         <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
@@ -21,7 +21,7 @@
           <div class="p-4 md:p-8">
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.shingle.name') }}</h3>
             <p style="color: #666666; font-size: 0.9375rem;">{{ t('services.shingle.desc') }}</p>
-            <button class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+            <button @click="active = 'shingle'" class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
           </div>
         </div>
         <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
@@ -29,7 +29,7 @@
           <div class="p-4 md:p-8">
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.tile.name') }}</h3>
             <p style="color: #666666; font-size: 0.9375rem;">{{ t('services.tile.desc') }}</p>
-            <button class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+            <button @click="active = 'tile'" class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
           </div>
         </div>
         <div data-animate="fade-in-up" class="bg-white rounded-lg overflow-hidden shadow-sm opacity-0" style="border: 1px solid #E5E5E5;">
@@ -37,16 +37,20 @@
           <div class="p-4 md:p-8">
             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3" style="color: #405A7A; font-family: 'Saira';">{{ t('services.flat.name') }}</h3>
             <p style="color: #666666; font-size: 0.9375rem;">{{ t('services.flat.desc') }}</p>
-            <button class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
+            <button @click="active = 'flat'" class="font-semibold mt-3 md:mt-4 transition min-h-[44px] flex items-center" style="color: #C86432;">{{ t('services.learnMore') }}</button>
           </div>
         </div>
       </div>
     </div>
+    <ServiceModal :service="active" @close="active = null" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useI18n } from '../i18n'
+import ServiceModal from './ServiceModal.vue'
 
 const { t } = useI18n()
+const active = ref<string | null>(null)
 </script>
