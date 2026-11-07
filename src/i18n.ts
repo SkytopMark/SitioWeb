@@ -58,7 +58,8 @@ export const translations = {
           { name: 'Modified Bitumen', desc: 'Multi-layer asphalt system with strong resistance to foot traffic and punctures.' }
         ]
       },
-      learnMore: 'Learn more →'
+      learnMore: 'Learn more →',
+      close: 'Close'
     },
     process: {
       headline: 'Our roofing process',
@@ -178,7 +179,8 @@ export const translations = {
           { name: 'Bitumen Modificado', desc: 'Sistema asfáltico multicapa muy resistente al tránsito y a las perforaciones.' }
         ]
       },
-      learnMore: 'Saber más →'
+      learnMore: 'Saber más →',
+      close: 'Cerrar'
     },
     process: {
       headline: 'Cómo trabajamos',

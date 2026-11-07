@@ -1,8 +1,8 @@
 <template>
-  <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white border-opacity-10">
+  <header style="background-color: rgba(10, 37, 64, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" class="text-white fixed top-0 left-0 right-0 z-50 border-b border-white/10">
     <nav class="max-w-6xl mx-auto py-0 md:py-3 flex items-center justify-between gap-1 md:gap-6 px-3 md:px-[40px]">
       <!-- Logo Responsivo -->
-      <div class="flex items-center flex-shrink-0">
+      <div class="flex items-center shrink-0">
         <!-- Mobile: Isotipo -->
         <img :src="isotipoLogo" alt="Skytop Roofing" class="md:hidden h-14 w-auto">
         <!-- Desktop: Logo Horizontal (max 220px) -->
@@ -18,12 +18,12 @@
       </nav>
 
       <!-- Language & CTA -->
-      <div class="flex items-center gap-1 md:gap-2 flex-shrink-0">
+      <div class="flex items-center gap-1 md:gap-2 shrink-0">
         <!-- Language Dropdown -->
         <div class="relative">
           <button
             @click="showLanguageMenu = !showLanguageMenu"
-            class="flex items-center justify-center w-11 h-11 md:h-14 rounded transition hover:opacity-70 min-h-[44px]"
+            class="flex items-center justify-center w-11 h-11 md:h-14 rounded-sm transition hover:opacity-70 min-h-[44px]"
             title="Select language"
           >
             <span class="text-xl md:text-2xl">🌐</span>
@@ -47,7 +47,7 @@
         <!-- CTA Button -->
         <button
           @click="openModal"
-          class="text-white px-3 md:px-5 py-2 md:py-3 rounded font-semibold whitespace-nowrap hover:opacity-80 transition flex-shrink-0 min-h-[44px] flex items-center text-xs md:text-sm"
+          class="text-white px-3 md:px-5 py-2 md:py-3 rounded-sm font-semibold whitespace-nowrap hover:opacity-80 transition shrink-0 min-h-[44px] flex items-center text-xs md:text-sm"
           style="background-color: #C86432;"
         >
           {{ t('header.cta') }}

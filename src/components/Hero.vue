@@ -14,7 +14,7 @@
         </p>
         <button
           @click="openModal"
-          class="inline-flex items-center text-white px-6 md:px-8 py-3 rounded font-semibold transition hover:opacity-90 min-h-[44px]"
+          class="inline-flex items-center text-white px-6 md:px-8 py-3 rounded-sm font-semibold transition hover:opacity-90 min-h-[44px]"
           style="background-color: #C86432; border: none; cursor: pointer;"
         >
           {{ t('hero.cta') }}
