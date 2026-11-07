@@ -7,8 +7,8 @@
       <p class="text-sm md:text-base text-center mb-8 md:mb-12 max-w-2xl mx-auto" style="color: #666666;">
         {{ t('portfolio.subtitle') }}
       </p>
-      <!-- Desktop: the hovered/focused card widens, the others narrow; height never changes. Mobile: stacked. -->
-      <div class="flex flex-col md:flex-row gap-4 md:h-[520px]">
+      <!-- Desktop: equal widths at rest; the hovered/focused card widens and the others narrow; height never changes. Mobile: stacked. -->
+      <div class="flex flex-col md:flex-row gap-4 md:h-[520px]" @mouseleave="active = null" @focusout="active = null">
         <button
           v-for="(project, i) in projects"
           :key="project.title"
@@ -24,7 +24,7 @@
           <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent"></div>
           <p
             class="absolute bottom-0 left-0 p-5 font-semibold text-white text-lg md:text-xl whitespace-nowrap transition-opacity duration-300"
-            :class="active === i ? 'md:opacity-100 md:delay-200' : 'md:opacity-0'"
+            :class="active === null || active === i ? 'md:opacity-100 md:delay-200' : 'md:opacity-0'"
             style="font-family: 'Saira';"
           >{{ project.title }}</p>
         </button>
@@ -50,6 +50,6 @@ const projects = [
   { title: 'Commercial Flat Roof', cover: base + 'images/areas/3.jpg', images: [] as string[] }
 ]
 
-const active = ref(0)
+const active = ref<number | null>(null)
 const open = ref<number | null>(null)
 </script>
