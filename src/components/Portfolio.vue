@@ -7,50 +7,47 @@
       <p class="text-sm md:text-base text-center mb-8 md:mb-12 max-w-2xl mx-auto" style="color: #666666;">
         {{ t('portfolio.subtitle') }}
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/1.jpg" alt="Modern Metal Roof" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Modern Metal Roof</p>
-          </div>
-        </div>
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/2.jpg" alt="Coastal Tile Installation" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Coastal Tile Installation</p>
-          </div>
-        </div>
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/3.jpg" alt="Commercial Flat Roof" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Commercial Flat Roof</p>
-          </div>
-        </div>
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/4.jpg" alt="Shingle Replacement" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Shingle Replacement</p>
-          </div>
-        </div>
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/5.jpg" alt="Historic Restoration" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Historic Restoration</p>
-          </div>
-        </div>
-        <div class="rounded-lg h-48 md:h-64 overflow-hidden relative group">
-          <img src="/images/areas/1.jpg" alt="Storm Damage Repair" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition flex items-center justify-center">
-            <p class="font-semibold text-center text-white text-sm md:text-base px-2">Storm Damage Repair</p>
-          </div>
-        </div>
+      <!-- Desktop: the hovered/focused card widens, the others narrow; height never changes. Mobile: stacked. -->
+      <div class="flex flex-col md:flex-row gap-4 md:h-[520px]">
+        <button
+          v-for="(project, i) in projects"
+          :key="project.title"
+          type="button"
+          @mouseenter="active = i"
+          @focus="active = i"
+          @click="open = i"
+          :aria-label="project.title"
+          class="relative overflow-hidden rounded-lg h-72 md:h-auto md:basis-0 md:min-w-[90px] text-left transition-[flex-grow] duration-500 ease-out"
+          :class="active === i ? 'md:grow-[4]' : 'md:grow'"
+        >
+          <img :src="project.cover" :alt="project.title" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent"></div>
+          <p
+            class="absolute bottom-0 left-0 p-5 font-semibold text-white text-lg md:text-xl whitespace-nowrap transition-opacity duration-300"
+            :class="active === i ? 'md:opacity-100 md:delay-200' : 'md:opacity-0'"
+            style="font-family: 'Saira';"
+          >{{ project.title }}</p>
+        </button>
       </div>
     </div>
+    <ProjectGallery :project="open === null ? null : projects[open]" @close="open = null" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useI18n } from '../i18n'
+import ProjectGallery from './ProjectGallery.vue'
 
 const { t } = useI18n()
+
+// Add gallery photos to `images`; empty slots show placeholders.
+const projects = [
+  { title: 'Modern Metal Roof', cover: '/images/areas/1.jpg', images: [] as string[] },
+  { title: 'Coastal Tile Installation', cover: '/images/areas/2.jpg', images: [] as string[] },
+  { title: 'Commercial Flat Roof', cover: '/images/areas/3.jpg', images: [] as string[] }
+]
+
+const active = ref(0)
+const open = ref<number | null>(null)
 </script>

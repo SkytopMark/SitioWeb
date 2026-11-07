@@ -28,6 +28,11 @@
           </div>
 
           <div class="area-card p-4 md:p-6 rounded-lg">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Port Charlotte</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.portCharlotteDesc') }}</p>
+          </div>
+
+          <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Naples</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.naplesDesc') }}</p>
           </div>
@@ -35,6 +40,11 @@
           <div class="area-card p-4 md:p-6 rounded-lg">
             <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Sarasota</h3>
             <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.sarasotaDesc') }}</p>
+          </div>
+
+          <div class="area-card p-4 md:p-6 rounded-lg">
+            <h3 class="font-bold text-base md:text-lg mb-1" style="color: #C86432; font-family: 'Saira';">Tampa</h3>
+            <p class="text-xs md:text-sm" style="color: #2B2B2B;">{{ t('areas.tampaDesc') }}</p>
           </div>
         </div>
       </div>
@@ -67,8 +77,10 @@ onMounted(() => {
   const locations = [
     { name: 'Cape Coral', lat: 26.5629, lng: -81.9496 },
     { name: 'Fort Myers', lat: 26.6406, lng: -81.8723 },
+    { name: 'Port Charlotte', lat: 26.9762, lng: -82.0906 },
     { name: 'Naples', lat: 26.1411, lng: -81.7948 },
-    { name: 'Sarasota', lat: 27.3364, lng: -82.5305 }
+    { name: 'Sarasota', lat: 27.3364, lng: -82.5305 },
+    { name: 'Tampa', lat: 27.9506, lng: -82.4572 }
   ]
 
   locations.forEach(location => {
@@ -93,6 +105,9 @@ onMounted(() => {
       fillOpacity: 1
     }).bindPopup(`<div style="font-family: 'Saira'; font-weight: bold; color: #405A7A;">${location.name}</div>`).addTo(map)
   })
+
+  // frame every city (Naples to Tampa) instead of a fixed center
+  map.fitBounds(locations.map(l => [l.lat, l.lng]), { padding: [40, 40] })
 })
 
 // Cleanup map on unmount to prevent memory leaks

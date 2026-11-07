@@ -6,7 +6,7 @@
         <button @click="close" class="text-white hover:opacity-70 text-2xl font-bold">×</button>
       </div>
 
-      <form @submit.prevent="submit" class="p-6 space-y-4">
+      <form @submit.prevent="submit()" class="p-6 space-y-4">
         <div>
           <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Nombre *</label>
           <input v-model="form.name" type="text" required placeholder="Tu nombre completo" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
@@ -33,6 +33,10 @@
         </div>
 
         <button type="submit" class="w-full text-white font-semibold py-3 rounded-lg transition hover:opacity-90" style="background-color: #C86432;">
+          Enviar por correo
+        </button>
+
+        <button type="button" @click="submit('whatsapp')" class="w-full font-semibold py-3 rounded-lg transition hover:opacity-80" style="border: 2px solid #C86432; color: #C86432;">
           Enviar por WhatsApp
         </button>
 
@@ -57,7 +61,8 @@ const form = reactive({ name: '', phone: '', email: '', address: '', message: ''
 
 const close = () => emit('close')
 
-const submit = () => {
+// Default (form submit / Enter) is email; the WhatsApp button passes 'whatsapp'.
+const submit = (via: 'email' | 'whatsapp' = 'email') => {
   if (!form.name || !form.phone || !form.email) {
     alert('Por favor completa todos los campos requeridos')
     return
@@ -71,7 +76,12 @@ Correo: ${form.email}
 ${form.address ? `Dirección: ${form.address}` : ''}
 ${form.message ? `\nMensaje: ${form.message}` : ''}`
 
-  window.open(`https://wa.me/12393659939?text=${encodeURIComponent(msg)}`, '_blank')
+  if (via === 'whatsapp') {
+    window.open(`https://wa.me/12393659939?text=${encodeURIComponent(msg)}`, '_blank')
+  } else {
+    // shortcut: mailto opens the visitor's own mail app, so nothing is sent if they have none set up; upgrade to a form service (e.g. FormSubmit) if leads get lost
+    window.location.href = `mailto:skytoopmarketing@gmail.com?subject=${encodeURIComponent('Contacto desde la web - ' + form.name)}&body=${encodeURIComponent(msg)}`
+  }
   form.name = form.phone = form.email = form.address = form.message = ''
   close()
 }

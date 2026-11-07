@@ -87,10 +87,12 @@ export const translations = {
       headline: 'Service areas across Southwest Florida',
       subtitle: 'We serve homeowners and businesses throughout the region with local expertise and responsive service.',
       disclaimer: 'Not limited to these areas — we\'re happy to discuss expanding our service range to meet your needs.',
-      capeCoralDesc: 'Serving Cape Coral\'s growing residential market with expert installations.',
-      fortMyersDesc: 'Our headquarters and primary service hub for South Lee County.',
+      capeCoralDesc: 'Our headquarters and primary service hub for Lee County.',
+      fortMyersDesc: 'Serving Fort Myers homes and businesses with fast, local response.',
+      portCharlotteDesc: 'Reliable roofing for Port Charlotte and the Charlotte County coast.',
       naplesDesc: 'Premium roofing solutions for Naples\' luxury residential market.',
-      sarasotaDesc: 'Serving Sarasota County\'s coastal communities with responsive service.'
+      sarasotaDesc: 'Durable, storm-ready roofs for homes across Sarasota County.',
+      tampaDesc: 'Bringing our Southwest Florida expertise to the Tampa Bay area.'
     },
     contact: {
       headline: 'Get your free roof estimate',
@@ -208,10 +210,12 @@ export const translations = {
       headline: 'Servimos a Southwest Florida',
       subtitle: 'Trabajamos con propietarios y negocios de toda la región con experiencia local y servicio profesional.',
       disclaimer: 'Nos extendemos fuera de estas áreas. Contáctanos para hablar sobre tu ubicación específica.',
-      capeCoralDesc: 'Servimos el mercado residencial de Cape Coral con instalaciones de calidad.',
-      fortMyersDesc: 'Nuestra oficina principal y centro de servicio para South Lee County.',
+      capeCoralDesc: 'Nuestra oficina principal y centro de servicio para Lee County.',
+      fortMyersDesc: 'Atendemos hogares y negocios de Fort Myers con respuesta rápida y local.',
+      portCharlotteDesc: 'Techos confiables para Port Charlotte y la costa de Charlotte County.',
       naplesDesc: 'Soluciones premium de techos para las viviendas de lujo de Naples.',
-      sarasotaDesc: 'Servimos las comunidades costeras del condado de Sarasota con profesionalismo.'
+      sarasotaDesc: 'Techos resistentes y preparados para tormentas en todo el condado de Sarasota.',
+      tampaDesc: 'Llevamos nuestra experiencia de Southwest Florida al área de Tampa Bay.'
     },
     contact: {
       headline: 'Obtén tu presupuesto gratis',
