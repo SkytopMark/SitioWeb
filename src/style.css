@@ -9,13 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Map responsive height */
+/* Map height on mobile; on desktop it stretches to match the area cards (Areas.vue) */
 #map {
   height: 300px;
 }
 @media (min-width: 768px) {
   #map {
-    height: 560px;
+    height: auto;
   }
 }
 

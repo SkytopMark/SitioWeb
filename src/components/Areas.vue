@@ -12,8 +12,9 @@
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8" style="position: relative; z-index: 1;">
-        <div class="md:col-span-2">
-          <div id="map" style="border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1;"></div>
+        <!-- Desktop: the map fills the row, so its height always matches the city cards -->
+        <div class="md:col-span-2 relative">
+          <div id="map" class="relative md:absolute md:inset-0" style="border-radius: 8px; border: 1px solid #E5E5E5; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1;"></div>
         </div>
 
         <div class="space-y-3 md:space-y-4" ref="cardsContainer">
@@ -59,6 +60,7 @@ import { useI18n } from '../i18n'
 const { t } = useI18n()
 
 let map: any = null
+let resizeObserver: ResizeObserver | null = null
 
 onMounted(() => {
   // Guard: Check if Leaflet is loaded
@@ -107,11 +109,20 @@ onMounted(() => {
   })
 
   // frame every city (Naples to Tampa) instead of a fixed center
-  map.fitBounds(locations.map(l => [l.lat, l.lng]), { padding: [40, 40] })
+  const bounds = locations.map(l => [l.lat, l.lng])
+  map.fitBounds(bounds, { padding: [40, 40] })
+
+  // card heights change after fonts load or on resize; keep the map tiles and framing in sync
+  resizeObserver = new ResizeObserver(() => {
+    map.invalidateSize()
+    map.fitBounds(bounds, { padding: [40, 40] })
+  })
+  resizeObserver.observe(document.getElementById('map')!)
 })
 
 // Cleanup map on unmount to prevent memory leaks
 onBeforeUnmount(() => {
+  resizeObserver?.disconnect()
   if (map) {
     map.remove()
   }
