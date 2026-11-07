@@ -20,7 +20,7 @@
       <!-- Language & CTA -->
       <div class="flex items-center gap-1 md:gap-2 shrink-0">
         <!-- Language Dropdown -->
-        <div class="relative">
+        <div class="relative" @focusout="onMenuFocusOut">
           <button
             @click="showLanguageMenu = !showLanguageMenu"
             class="flex items-center justify-center w-11 h-11 md:h-14 rounded-sm transition hover:opacity-70 min-h-[44px]"
@@ -68,7 +68,12 @@ const language = ref<'en' | 'es'>(getLanguage())
 const showLanguageMenu = ref(false)
 const openModal = inject<() => void>('openModal', () => {})
 
-const handleLanguageSelect = (lang: 'en' | 'es') => {
+// Close the menu when focus (click or Tab) moves outside it
+const onMenuFocusOut = (e: FocusEvent) => {
+  if (!(e.currentTarget as HTMLElement).contains(e.relatedTarget as Node)) showLanguageMenu.value = false
+}
+
+const handleLanguageSelect =(lang: 'en' | 'es') => {
   language.value = lang
   setLanguage(lang)
   showLanguageMenu.value = false

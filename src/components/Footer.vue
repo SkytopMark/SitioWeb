@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto py-6 md:py-8 px-4 md:px-[40px]">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
         <div>
-          <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" style="height: 40px; md:height: 48px; width: auto; margin-bottom: 12px; md:margin-bottom: 16px;">
+          <img src="/images/logos/icono-vertical-blanco.png" alt="Skytop Roofing" class="h-10 md:h-12 w-auto mb-3 md:mb-4">
           <p class="text-sm md:text-base">{{ t('footer.companyDesc') }}</p>
         </div>
         <div>
@@ -15,10 +15,10 @@
         <div>
           <h4 class="font-semibold mb-3 md:mb-4 text-sm md:text-base">{{ t('footer.servicesLabel') }}</h4>
           <ul class="grid grid-cols-2 gap-2 text-sm md:text-base">
-            <li><a href="#" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.metal') }}</a></li>
-            <li><a href="#" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.shingle') }}</a></li>
-            <li><a href="#" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.tile') }}</a></li>
-            <li><a href="#" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.flat') }}</a></li>
+            <li><a href="#services" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.metal') }}</a></li>
+            <li><a href="#services" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.shingle') }}</a></li>
+            <li><a href="#services" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.tile') }}</a></li>
+            <li><a href="#services" class="transition hover:opacity-80 min-h-[44px] flex items-center">{{ t('footer.flat') }}</a></li>
           </ul>
         </div>
       </div>

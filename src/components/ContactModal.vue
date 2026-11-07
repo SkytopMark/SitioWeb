@@ -1,53 +1,48 @@
 <template>
-  <div v-if="isOpen" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" @click="close">
-    <div class="bg-white rounded-lg shadow-xl max-w-md w-full" @click.stop>
-      <div class="p-6 flex items-center justify-between" style="background: linear-gradient(135deg, #405A7A 0%, #2B4B6D 100%);">
-        <h2 class="text-xl font-bold text-white">Contáctanos</h2>
-        <button @click="close" class="text-white hover:opacity-70 text-2xl font-bold">×</button>
+  <Modal :open="isOpen" :title="t('contact.title')" width="max-w-md" @close="close">
+    <form @submit.prevent="submit()" class="p-6 space-y-4">
+      <div>
+        <label for="cf-name" class="block text-sm font-semibold mb-2" style="color: #405A7A;">{{ t('contact.form.name') }} *</label>
+        <input id="cf-name" v-model="form.name" type="text" required :placeholder="t('contact.form.namePlaceholder')" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
       </div>
 
-      <form @submit.prevent="submit()" class="p-6 space-y-4">
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Nombre *</label>
-          <input v-model="form.name" type="text" required placeholder="Tu nombre completo" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
-        </div>
+      <div>
+        <label for="cf-phone" class="block text-sm font-semibold mb-2" style="color: #405A7A;">{{ t('contact.form.phone') }} *</label>
+        <input id="cf-phone" v-model="form.phone" type="tel" required placeholder="(239) 365-9939" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
+      </div>
 
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Teléfono *</label>
-          <input v-model="form.phone" type="tel" required placeholder="(239) 365-9939" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
-        </div>
+      <div>
+        <label for="cf-email" class="block text-sm font-semibold mb-2" style="color: #405A7A;">{{ t('contact.form.email') }} *</label>
+        <input id="cf-email" v-model="form.email" type="email" required :placeholder="t('contact.form.emailPlaceholder')" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
+      </div>
 
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Correo *</label>
-          <input v-model="form.email" type="email" required placeholder="tu@correo.com" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
-        </div>
+      <div>
+        <label for="cf-address" class="block text-sm font-semibold mb-2" style="color: #405A7A;">{{ t('contact.form.address') }} ({{ t('contact.form.optional') }})</label>
+        <input id="cf-address" v-model="form.address" type="text" :placeholder="t('contact.form.addressPlaceholder')" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
+      </div>
 
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Dirección (opcional)</label>
-          <input v-model="form.address" type="text" placeholder="Tu dirección" class="w-full px-4 py-2 border rounded-lg text-sm" style="border-color: #E5E5E5; color: #2B2B2B;" />
-        </div>
+      <div>
+        <label for="cf-message" class="block text-sm font-semibold mb-2" style="color: #405A7A;">{{ t('contact.form.message') }}</label>
+        <textarea id="cf-message" v-model="form.message" :placeholder="t('contact.form.messagePlaceholder')" rows="3" class="w-full px-4 py-2 border rounded-lg text-sm resize-none" style="border-color: #E5E5E5; color: #2B2B2B;"></textarea>
+      </div>
 
-        <div>
-          <label class="block text-sm font-semibold mb-2" style="color: #405A7A;">Mensaje</label>
-          <textarea v-model="form.message" placeholder="¿Cómo podemos ayudarte?" rows="3" class="w-full px-4 py-2 border rounded-lg text-sm resize-none" style="border-color: #E5E5E5; color: #2B2B2B;"></textarea>
-        </div>
+      <button type="submit" class="w-full text-white font-semibold py-3 rounded-lg transition hover:opacity-90" style="background-color: #C86432;">
+        {{ t('contact.form.sendEmail') }}
+      </button>
 
-        <button type="submit" class="w-full text-white font-semibold py-3 rounded-lg transition hover:opacity-90" style="background-color: #C86432;">
-          Enviar por correo
-        </button>
+      <button type="button" @click="submit('whatsapp')" class="w-full font-semibold py-3 rounded-lg transition hover:opacity-80" style="border: 2px solid #C86432; color: #C86432;">
+        {{ t('contact.form.send') }}
+      </button>
 
-        <button type="button" @click="submit('whatsapp')" class="w-full font-semibold py-3 rounded-lg transition hover:opacity-80" style="border: 2px solid #C86432; color: #C86432;">
-          Enviar por WhatsApp
-        </button>
-
-        <p class="text-xs text-center" style="color: #999999;">Te responderemos dentro de 24 horas</p>
-      </form>
-    </div>
-  </div>
+      <p class="text-xs text-center" style="color: #999999;">{{ t('contact.form.info') }}</p>
+    </form>
+  </Modal>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { useI18n } from '../i18n'
+import Modal from './Modal.vue'
 
 defineProps<{
   isOpen: boolean
@@ -57,14 +52,16 @@ const emit = defineEmits<{
   close: []
 }>()
 
+const { t } = useI18n()
 const form = reactive({ name: '', phone: '', email: '', address: '', message: '' })
 
 const close = () => emit('close')
 
 // Default (form submit / Enter) is email; the WhatsApp button passes 'whatsapp'.
+// The message itself stays in Spanish: it is read by the Skytop team, not the visitor.
 const submit = (via: 'email' | 'whatsapp' = 'email') => {
   if (!form.name || !form.phone || !form.email) {
-    alert('Por favor completa todos los campos requeridos')
+    alert(t('contact.form.error'))
     return
   }
 

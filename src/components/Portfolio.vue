@@ -41,11 +41,13 @@ import ProjectGallery from './ProjectGallery.vue'
 
 const { t } = useI18n()
 
-// Add gallery photos to `images`; empty slots show placeholders.
+const base = import.meta.env.BASE_URL // '/SitioWeb/' on GitHub Pages; paths in scripts don't get it automatically
+
+// Add gallery photos to `images` (e.g. base + 'images/projects/metal-1.jpg'); empty slots show placeholders.
 const projects = [
-  { title: 'Modern Metal Roof', cover: '/images/areas/1.jpg', images: [] as string[] },
-  { title: 'Coastal Tile Installation', cover: '/images/areas/2.jpg', images: [] as string[] },
-  { title: 'Commercial Flat Roof', cover: '/images/areas/3.jpg', images: [] as string[] }
+  { title: 'Modern Metal Roof', cover: base + 'images/areas/1.jpg', images: [] as string[] },
+  { title: 'Coastal Tile Installation', cover: base + 'images/areas/2.jpg', images: [] as string[] },
+  { title: 'Commercial Flat Roof', cover: base + 'images/areas/3.jpg', images: [] as string[] }
 ]
 
 const active = ref(0)

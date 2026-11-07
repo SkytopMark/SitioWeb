@@ -16,7 +16,7 @@ export const translations = {
     trustBar: {
       experience: 'Years in business',
       completed: 'Certified Contractor',
-      satisfaction: 'Satisfaction rate',
+      satisfaction: 'Free inspection',
       emergency: 'Emergency response'
     },
     services: {
@@ -79,10 +79,6 @@ export const translations = {
       headline: 'Recent Projects',
       subtitle: 'Browse our portfolio of recent roofing installations and repairs across Southwest Florida.'
     },
-    testimonials: {
-      headline: 'Trusted by Homeowners',
-      subtitle: 'See what our satisfied customers have to say about their experience with Skytop Roofing.'
-    },
     areas: {
       headline: 'Service areas across Southwest Florida',
       subtitle: 'We serve homeowners and businesses throughout the region with local expertise and responsive service.',
@@ -106,13 +102,19 @@ export const translations = {
         address: 'Address',
         message: 'Message',
         send: 'Send via WhatsApp',
+        sendEmail: 'Send by email',
+        optional: 'optional',
+        namePlaceholder: 'Your full name',
+        emailPlaceholder: 'you@email.com',
+        addressPlaceholder: 'Your address',
+        messagePlaceholder: 'How can we help you?',
         error: 'Please fill in all required fields',
         info: 'We\'ll respond within 24 hours'
       }
     },
     footer: {
       company: 'Company',
-      companyDesc: 'Skytop Roofing has been protecting Southwest Florida homes for over 15 years with unmatched craftsmanship and reliability.',
+      companyDesc: 'Skytop Roofing has been protecting Southwest Florida homes for over 6 years with unmatched craftsmanship and reliability.',
       contactLabel: 'Contact',
       servicesLabel: 'Services',
       metal: 'Metal Roofing',
@@ -139,7 +141,7 @@ export const translations = {
     trustBar: {
       experience: 'Años de experiencia',
       completed: 'Contratista Certificado Florida',
-      satisfaction: 'Satisfacción garantizada',
+      satisfaction: 'Inspección gratuita',
       emergency: 'Disponibles 24/7'
     },
     services: {
@@ -202,10 +204,6 @@ export const translations = {
       headline: 'Trabajos Recientes',
       subtitle: 'Mira nuestros proyectos de instalación y reparación de techos recientes en Southwest Florida.'
     },
-    testimonials: {
-      headline: 'De Confianza para Propietarios',
-      subtitle: 'Lee las historias de nuestros clientes satisfechos y su experiencia con Skytop Roofing.'
-    },
     areas: {
       headline: 'Servimos a Southwest Florida',
       subtitle: 'Trabajamos con propietarios y negocios de toda la región con experiencia local y servicio profesional.',
@@ -229,13 +227,19 @@ export const translations = {
         address: 'Dirección',
         message: 'Mensaje',
         send: 'Enviar por WhatsApp',
+        sendEmail: 'Enviar por correo',
+        optional: 'opcional',
+        namePlaceholder: 'Tu nombre completo',
+        emailPlaceholder: 'tu@correo.com',
+        addressPlaceholder: 'Tu dirección',
+        messagePlaceholder: '¿Cómo podemos ayudarte?',
         error: 'Por favor completa todos los campos requeridos',
         info: 'Te responderemos dentro de 24 horas'
       }
     },
     footer: {
       company: 'Acerca de nosotros',
-      companyDesc: 'Más de 15 años protegiendo hogares en Southwest Florida con artesanía profesional y garantía de confianza.',
+      companyDesc: 'Más de 6 años protegiendo hogares en Southwest Florida con artesanía profesional y garantía de confianza.',
       contactLabel: 'Contacto',
       servicesLabel: 'Servicios',
       metal: 'Techos de Metal',
@@ -248,17 +252,19 @@ export const translations = {
 }
 
 export function useI18n() {
+  // localStorage throws when site data is blocked; fall back to Spanish instead of crashing the page
   const getLanguage = (): 'en' | 'es' => {
-    if (typeof window !== 'undefined') {
-      return (localStorage.getItem('language') as 'en' | 'es') || 'es'
+    try {
+      return localStorage.getItem('language') === 'en' ? 'en' : 'es'
+    } catch {
+      return 'es'
     }
-    return 'es'
   }
 
   const setLanguage = (lang: 'en' | 'es') => {
-    if (typeof window !== 'undefined') {
+    try {
       localStorage.setItem('language', lang)
-    }
+    } catch {}
   }
 
   const t = (key: string) => {

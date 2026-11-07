@@ -1,5 +1,5 @@
 <template>
-  <section style="background-color: #FFFFFF;" class="py-8 md:py-20">
+  <section id="areas" style="background-color: #FFFFFF;" class="py-8 md:py-20">
     <div class="max-w-6xl mx-auto px-4 md:px-[40px]">
       <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-center" style="color: #405A7A; font-family: 'Saira';">
         {{ t('areas.headline') }}

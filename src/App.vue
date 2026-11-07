@@ -9,7 +9,6 @@
       <Services />
       <Process />
       <Portfolio />
-      <Testimonials />
       <Areas />
       <Contact ref="contactRef" />
     </div>
@@ -27,7 +26,6 @@ import TrustBar from './components/TrustBar.vue'
 import Services from './components/Services.vue'
 import Process from './components/Process.vue'
 import Portfolio from './components/Portfolio.vue'
-import Testimonials from './components/Testimonials.vue'
 import Areas from './components/Areas.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'

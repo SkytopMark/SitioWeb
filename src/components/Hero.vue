@@ -1,6 +1,6 @@
 <template>
   <section class="relative min-h-screen flex items-center overflow-hidden">
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.6);">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.6);">
       <source src="/images/hero/hero.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22><defs><pattern id=%22p%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><rect fill=%22none%22 stroke=%22rgba(255,255,255,0.1)%22 stroke-width=%221%22 width=%22100%22 height=%22100%22/></pattern></defs><rect width=%221200%22 height=%22600%22 fill=%22url(%23p)%22/></svg>')"></div>
